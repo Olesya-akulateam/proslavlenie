@@ -184,6 +184,27 @@
     .pcard,.rcol{padding:24px} .banner{padding:32px 22px} .final{padding:40px 22px}
     .final h2{font-size:25px} .final p{font-size:17px}
   }
+  /* key verse inside a section */
+  .keyverse{text-align:center;max-width:920px;margin:0 auto 32px;font-family:'Unbounded';font-size:22px;line-height:1.4;font-weight:600;
+    color:transparent;background:var(--gradgold);-webkit-background-clip:text;background-clip:text}
+  .keyverse b{display:block;margin-top:12px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;-webkit-text-fill-color:#c9a8ff;color:#c9a8ff;font-weight:700}
+  /* codex — образ успешного служителя хвалы */
+  .chapter{display:flex;align-items:center;gap:16px;margin:44px 0 8px}
+  .chapter .chnum{font-family:'Unbounded';font-size:36px;font-weight:800;line-height:1;color:transparent;background:var(--gradgold);-webkit-background-clip:text;background-clip:text}
+  .chapter h3{font-family:'Unbounded';font-size:26px;margin:0}
+  .chlead{color:var(--mut);font-size:16px;margin:0 0 22px;max-width:860px}
+  .cx3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .cx2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cxcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;transition:.25s}
+  .cxcard:hover{border-color:var(--gold);box-shadow:var(--glowg);transform:translateY(-3px)}
+  .cxcard .ic{font-size:26px}
+  .cxcard h4{font-family:'Unbounded';font-size:18px;margin:12px 0 6px}
+  .cxcard .sub2{color:#ffe19a;font-size:13px;font-weight:700;margin:0 0 12px}
+  .cxcard>p{color:#d9d2f2;font-size:14.5px;margin:0 0 10px}
+  .cxcard ul{list-style:none;margin:0;padding:0}
+  .cxcard li{display:flex;gap:9px;align-items:flex-start;padding:5px 0;font-size:14px;color:#cfc7ea;line-height:1.5}
+  .cxcard li .d{color:var(--gold);margin-top:1px;flex-shrink:0}
+  @media(max-width:860px){.cx3,.cx2{grid-template-columns:1fr}.keyverse{font-size:19px}.chapter h3{font-size:22px}}
 </style>
 </head>
 <body>
@@ -196,25 +217,25 @@
   <div class="crown">👑</div>
   <p class="eyebrow">Служение церкви</p>
   <h1>Служение <span class="gradg">прославления</span></h1>
-  <div class="sub">Дом левитов</div>
-  <p>Мы призваны служить Господу в хвале и поклонении. Здесь высвобождается слово, что возбуждает веру в сердцах, меняется атмосфера зала — и рождается победа: в себе, в команде, в церкви.</p>
+  <div class="sub">Церковь «Любовь Христа»</div>
+  <p>Мы призваны служить Господу в хвале и поклонении. Это служение престола, которое меняет атмосферу — и приходит духовная победа: в себе, в команде, в церкви.</p>
 </div></div>
 
 <!-- OPENING VERSE -->
 <div class="verseband"><div class="wrap">
-  <p class="q gradg">«Впереди шли поющие, позади играющие на орудиях, в средине девы с тимпанами»</p>
-  <cite>Псалтирь 67:26</cite>
+  <p class="q gradg">«Но настанет время и настало уже, когда истинные поклонники будут поклоняться Отцу в духе и истине, ибо таких поклонников Отец ищет Себе»</p>
+  <cite>Иоанна 4:23</cite>
 </div></div>
 
 <!-- СУТЬ -->
 <section><div class="wrap">
   <p class="eyebrow">Суть</p>
-  <h2 class="h2">Служение престола: высвобождение слова</h2>
+  <h2 class="h2">Служение престола: высвобождение атмосферы</h2>
   <p class="lead">Прославление — это служение престола. Через хвалу высвобождается слово, которое должно возбудить веру в человеке. Всё, чем Бог одарил тебя — дары и таланты — не остаётся при тебе: ты высвобождаешь это в зал. А то, какого ты духа, определяет всю твою жизнь и всё твоё служение.</p>
   <div class="quals">
     <div class="qual"><div class="ic">🔥</div><h4>Высвобождение слова</h4><p>Слово с престола возбуждает веру в человеке.</p></div>
     <div class="qual"><div class="ic">🎁</div><h4>Дары и таланты</h4><p>То, что есть у Бога в тебе — высвобождаешь в зал.</p></div>
-    <div class="qual"><div class="ic">🕊️</div><h4>Какого ты духа</h4><p>Дух, которым ты служишь, определяет всю жизнь.</p></div>
+    <div class="qual"><div class="ic">🕊️</div><h4>Какого ты духа</h4><p>Дух, который в тебе, определяет что ты транслируешь.</p></div>
     <div class="qual"><div class="ic">🌌</div><h4>Атмосфера</h4><p>Служение меняет твою атмосферу — и атмосферу других.</p></div>
   </div>
 </div></section>
@@ -224,47 +245,103 @@
   <div class="banner">
     <div class="bgimg" style="background-image:url('photos/drums.jpg')"></div>
     <div class="ic">🏆</div>
-    <h3>В прославлении нельзя выдавить — нужно совершать победу</h3>
-    <p>Хвала — это не усилие «выдавить из себя». Это победа, которую ты совершаешь. И она рождается не в одиночку, а по кругу: сначала в себе, потом в команде, а через команду — во всей церкви.</p>
+    <h3>В прославлении нельзя выдавить то, чего в тебе нет, — нужно совершать победу в хвале</h3>
     <div class="flow">
-      <div class="fstep"><div class="ic">🙏</div><h4>Победа в себе</h4><p>Сердце в поклонении</p></div>
+      <div class="fstep"><div class="ic">🙏</div><h4>Победа в себе</h4><p>Сердце поклонника</p></div>
       <div class="arrow">→</div>
       <div class="fstep"><div class="ic">🤝</div><h4>Победа в команде</h4><p>Единый дух</p></div>
       <div class="arrow">→</div>
-      <div class="fstep"><div class="ic">⛪</div><h4>Победа в церкви</h4><p>Меняется весь зал</p></div>
+      <div class="fstep"><div class="ic">⛪</div><h4>Победа в церкви</h4><p>Меняется атмосфера в зале</p></div>
     </div>
   </div>
 </div></section>
 
 <!-- КОДЕКС ЛЕВИТА -->
 <section><div class="wrap">
-  <p class="eyebrow">Кодекс левита</p>
-  <h2 class="h2">Сердце прославленца</h2>
-  <p class="lead">То, на чём стоит служитель хвалы. Не техника выходит на первый план, а Христос — и дух, которым ты выходишь на служение.</p>
-  <div class="princ">
-    <div class="pcard">
-      <div class="ic">✝️</div>
-      <h3>Лик Христа перед собой</h3>
-      <p>Убираем мысль «получится ли песню сыграть». Сейчас важно не это, а прославить Христа. Держи лик Христа перед собой — и страх сыграть уходит.</p>
-      <div class="verse">«Взирая на начальника и совершителя веры Иисуса» — Евреям 12:2</div>
+  <p class="eyebrow center">Кодекс левита</p>
+  <h2 class="h2 center">Образ успешного служителя хвалы</h2>
+  <p class="lead center">Ориентир для каждого в команде прославления. Три опоры служителя: компетенция, ответственность и ценности.</p>
+
+  <div class="chapter"><div class="chnum">01</div><h3>Компетенция</h3></div>
+  <p class="chlead">Компетенция в команде прославления делится на три вида: духовная, душевная и физическая.</p>
+  <div class="cx3">
+    <div class="cxcard">
+      <div class="ic">🙏</div>
+      <h4>Духовная</h4>
+      <p class="sub2">Участвовать в команде хвалы могут члены церкви, которые:</p>
+      <ul>
+        <li><span class="d">◆</span><span>верят в Иисуса Христа как единственный путь к Богу;</span></li>
+        <li><span class="d">◆</span><span>возрастают в Благой Вести, посещают горницы;</span></li>
+        <li><span class="d">◆</span><span>любят поклоняться и имеют личные отношения с Богом.</span></li>
+      </ul>
     </div>
-    <div class="pcard">
-      <div class="ic">🎵</div>
-      <h3>Пой в духе — всё свершилось</h3>
-      <p>Песня — это не страдальческий плач. Ты поёшь в духе, из позиции «всё свершилось», из Его славы. Это песня победителя, а не жертвы обстоятельств.</p>
-      <div class="verse">«Буду петь духом, буду петь и умом» — 1 Коринфянам 14:15</div>
+    <div class="cxcard">
+      <div class="ic">💛</div>
+      <h4>Душевная</h4>
+      <p class="sub2">Каждый несёт ответственность за Божью атмосферу в команде — это:</p>
+      <ul>
+        <li><span class="d">◆</span><span>умение и желание побеждать свои эмоции;</span></li>
+        <li><span class="d">◆</span><span>покрывать недостатки других участников;</span></li>
+        <li><span class="d">◆</span><span>гасить, а не поддерживать конфликты.</span></li>
+      </ul>
     </div>
-    <div class="pcard">
-      <div class="ic">🕊️</div>
-      <h3>Какого ты духа</h3>
-      <p>То, каким духом ты живёшь и служишь, определяет всю твою жизнь. Служение хвалы начинается не со сцены, а с состояния сердца задолго до неё.</p>
-      <div class="verse">«Не знаете, какого вы духа» — Луки 9:55</div>
+    <div class="cxcard">
+      <div class="ic">🎼</div>
+      <h4>Физическая</h4>
+      <p class="sub2">Музыкальный навык, которым ты служишь:</p>
+      <ul>
+        <li><span class="d">◆</span><span>уровень выше начального — чтобы быть гибким и легко реагировать на изменения;</span></li>
+        <li><span class="d">◆</span><span>если уровень не позволяет импровизировать и подстраиваться — развивать навык;</span></li>
+        <li><span class="d">◆</span><span>растить музыкальность, вкус и наслушанность христианских песен.</span></li>
+      </ul>
     </div>
-    <div class="pcard">
-      <div class="ic">🌌</div>
-      <h3>Меняй атмосферу</h3>
-      <p>Твоё служение меняет твою атмосферу — и атмосферу вокруг. Прославленец приносит в зал небо, а не свои проблемы и настроение дня.</p>
-      <div class="verse">«Ты, живущий среди хвалений Израиля» — Псалтирь 21:4</div>
+  </div>
+
+  <div class="chapter"><div class="chnum">02</div><h3>Ответственность</h3></div>
+  <div class="cx2">
+    <div class="cxcard">
+      <div class="ic">👑</div>
+      <h4>Лидер команды прославления</h4>
+      <ul>
+        <li><span class="d">◆</span><span>следить за духовным состоянием участников;</span></li>
+        <li><span class="d">◆</span><span>следить за атмосферой в команде, поддерживать мир и радость;</span></li>
+        <li><span class="d">◆</span><span>помогать возрастать новым участникам;</span></li>
+        <li><span class="d">◆</span><span>быть духовным примером в поведении и служении;</span></li>
+        <li><span class="d">◆</span><span>формировать и утверждать репертуар;</span></li>
+        <li><span class="d">◆</span><span>определять состав команды прославления.</span></li>
+      </ul>
+    </div>
+    <div class="cxcard">
+      <div class="ic">🎤</div>
+      <h4>Участники команды</h4>
+      <ul>
+        <li><span class="d">◆</span><span>следить за атмосферой любви и порядка в команде;</span></li>
+        <li><span class="d">◆</span><span>поддерживать личный позитивный настрой;</span></li>
+        <li><span class="d">◆</span><span>возрастать в духе и вере, пребывая в учении (горницы, кафедра);</span></li>
+        <li><span class="d">◆</span><span>формировать христианский музыкальный вкус;</span></li>
+        <li><span class="d">◆</span><span>готовить к служению своё сердце и мысли;</span></li>
+        <li><span class="d">◆</span><span>планировать время так, чтобы не опаздывать на репетиции;</span></li>
+        <li><span class="d">◆</span><span>приходить на репетицию подготовленным.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chapter"><div class="chnum">03</div><h3>Ценности</h3></div>
+  <div class="cx2">
+    <div class="cxcard">
+      <div class="ic">✈️</div>
+      <h4>Приоритеты · два крыла самолёта</h4>
+      <p>Служение прославления держится на двух крыльях — профессионализм и духовность. Их важно развивать параллельно.</p>
+      <ul>
+        <li><span class="d">◆</span><span><b>Профессионализм</b> — музыкальная компетенция, хорошая подготовка, выученные песни и партии, рост навыков.</span></li>
+        <li><span class="d">◆</span><span><b>Духовность</b> — правильное положение сердца перед Богом, смирение и кротость, импровизация в духе, атмосфера хвалы через личное поклонение.</span></li>
+      </ul>
+    </div>
+    <div class="cxcard">
+      <div class="ic">🤝</div>
+      <h4>Взаимоотношения</h4>
+      <p>Члены команды в доверии следуют за лидером, который следует за Богом. Решения лидера принимаются с миром, а лидеру помогают в служении.</p>
+      <p>Отношения между собой строятся на взаимном понимании, любви и почтении.</p>
     </div>
   </div>
 </div></section>
@@ -274,6 +351,7 @@
   <p class="eyebrow">Структура</p>
   <h2 class="h2">Как устроена команда прославления</h2>
   <p class="lead">У служения есть духовное покрытие и понятная вертикаль ответственности — от духовного лидера до вокалистов, музыкантов и админа команды.</p>
+  <div class="keyverse">«Впереди шли поющие, позади играющие на орудиях, в средине девы с тимпанами»<b>Псалтирь 67:26</b></div>
   <div class="tree">
     <div class="node top"><div class="npic g"><img src="photos/den.jpg" alt="Ден" onerror="this.remove()"></div><div class="r">Ден</div><div class="d">Духовный лидер прославления · покрытие и направление</div></div>
     <div class="stem"></div>
@@ -371,10 +449,10 @@
 <section><div class="wrap">
   <div class="final">
     <h2>Здесь рождается поклонник</h2>
-    <p>В служении прославления мы держим лик Христа перед собой, поём в духе и совершаем победу — в себе, в команде и в церкви. Дом левитов, где хвала идёт впереди.</p>
+    <p>В служении прославления мы совершаем победу в хвале — в себе, в команде и в церкви. Церковь «Любовь Христа», где хвала идёт впереди.</p>
   </div>
 </div></section>
 
-<div class="foot wrap">Служение прославления · Дом левитов</div>
+<div class="foot wrap">Служение прославления · Церковь «Любовь Христа»</div>
 </body>
 </html>
