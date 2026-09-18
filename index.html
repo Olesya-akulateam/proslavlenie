@@ -17,7 +17,9 @@
     --shadow:0 24px 70px rgba(0,0,0,.6);
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 'Manrope',-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  html{overflow-x:hidden}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 'Manrope',-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100%}
+  h1,h2,h3,h4,p{overflow-wrap:break-word}
   .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
   h1,h2,h3,.uf{font-family:'Unbounded',sans-serif;letter-spacing:-.02em}
   .grad{color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
@@ -229,6 +231,34 @@
   .orgperson .pic.g{border-color:var(--gold);box-shadow:0 0 18px rgba(245,196,81,.4)}
   .orgperson .pic img{width:100%;height:100%;object-fit:cover;display:block}
   .orgperson .nm{font-size:12.5px;font-weight:600;color:#e7e2fb;line-height:1.25}
+  /* accordions (collapsible codex / rules) */
+  .accs{display:flex;flex-direction:column;gap:14px}
+  .acc{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:border-color .2s}
+  .acc:hover{border-color:rgba(245,196,81,.4)}
+  .acc[open]{border-color:rgba(245,196,81,.55)}
+  .acc summary,.acc-link{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:22px 26px;text-decoration:none;color:inherit}
+  .acc summary::-webkit-details-marker{display:none}
+  .ac-ic{font-size:26px;flex-shrink:0}
+  .ac-tt{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .ac-tt b{font-family:'Unbounded';font-size:18px;font-weight:600;color:#fff}
+  .ac-tt small{font-size:13px;font-weight:500;color:var(--mut)}
+  .ac-go{margin-left:auto;font-weight:700;font-size:13px;color:transparent;background:var(--gradgold);-webkit-background-clip:text;background-clip:text;display:flex;align-items:center;gap:8px;white-space:nowrap}
+  .chev{-webkit-text-fill-color:var(--gold);color:var(--gold);font-size:12px;transition:transform .25s}
+  .acc[open] .chev{transform:rotate(180deg)}
+  .acc .lc{display:none}
+  .acc[open] .lo{display:none}
+  .acc[open] .lc{display:inline}
+  .acc-body{padding:4px 26px 28px}
+  .acc-body .chapter{margin-top:26px}
+  @media(max-width:560px){
+    .acc summary,.acc-link{padding:18px 18px;gap:12px}
+    .ac-ic{font-size:22px}.ac-tt b{font-size:16px}.ac-tt small{font-size:12px}
+    .acc .lo,.acc .lc{display:none}
+    .acc-body{padding:4px 16px 22px}
+  }
+  /* headings left, incl. final */
+  .final{text-align:left}
+  .final .fverse{margin-left:0;margin-right:0}
   .rolecard:hover{border-color:var(--acc);box-shadow:var(--glow)}
   .rolecard .rt{font-family:'Unbounded';font-size:17px;margin:0 0 3px;display:flex;align-items:center;gap:9px}
   .rolecard .rf{color:#ffe19a;font-size:12.5px;font-weight:700;margin:0 0 16px}
@@ -294,96 +324,6 @@
   </div>
 </div></section>
 
-<!-- КОДЕКС ЛЕВИТА -->
-<section id="codex"><div class="wrap">
-  <p class="eyebrow">Кодекс левита</p>
-  <h2 class="h2">Образ успешного служителя хвалы</h2>
-  <p class="lead">Ориентир для каждого в команде прославления. Три опоры служителя: компетенция, ответственность и ценности.</p>
-
-  <div class="chapter"><div class="chnum">01</div><h3>Компетенция</h3></div>
-  <p class="chlead">Компетенция в команде прославления делится на три вида: духовная, душевная и физическая.</p>
-  <div class="cx3">
-    <div class="cxcard">
-      <div class="ic">🙏</div>
-      <h4>Духовная</h4>
-      <p class="sub2">Участвовать в команде хвалы могут члены церкви, которые:</p>
-      <ul>
-        <li><span class="d">◆</span><span>верят в Иисуса Христа как единственный путь к Богу;</span></li>
-        <li><span class="d">◆</span><span>возрастают в Благой Вести, посещают горницы;</span></li>
-        <li><span class="d">◆</span><span>любят поклоняться и имеют личные отношения с Богом.</span></li>
-      </ul>
-    </div>
-    <div class="cxcard">
-      <div class="ic">💛</div>
-      <h4>Душевная</h4>
-      <p class="sub2">Каждый несёт ответственность за Божью атмосферу в команде — это:</p>
-      <ul>
-        <li><span class="d">◆</span><span>умение и желание побеждать свои эмоции;</span></li>
-        <li><span class="d">◆</span><span>покрывать недостатки других участников;</span></li>
-        <li><span class="d">◆</span><span>гасить, а не поддерживать конфликты.</span></li>
-      </ul>
-    </div>
-    <div class="cxcard">
-      <div class="ic">🎼</div>
-      <h4>Физическая</h4>
-      <p class="sub2">Музыкальный навык, которым ты служишь:</p>
-      <ul>
-        <li><span class="d">◆</span><span>уровень выше начального — чтобы быть гибким и легко реагировать на изменения;</span></li>
-        <li><span class="d">◆</span><span>если уровень не позволяет импровизировать и подстраиваться — развивать навык;</span></li>
-        <li><span class="d">◆</span><span>растить музыкальность, вкус и наслушанность христианских песен.</span></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="chapter"><div class="chnum">02</div><h3>Ответственность</h3></div>
-  <div class="cx2">
-    <div class="cxcard">
-      <div class="ic">👑</div>
-      <h4>Лидеры команды прославления</h4>
-      <ul>
-        <li><span class="d">◆</span><span>следить за духовным состоянием участников;</span></li>
-        <li><span class="d">◆</span><span>следить за атмосферой в команде, поддерживать мир и радость;</span></li>
-        <li><span class="d">◆</span><span>помогать возрастать новым участникам;</span></li>
-        <li><span class="d">◆</span><span>быть духовным примером в поведении и служении;</span></li>
-        <li><span class="d">◆</span><span>формировать и утверждать репертуар;</span></li>
-        <li><span class="d">◆</span><span>определять состав команды прославления.</span></li>
-      </ul>
-    </div>
-    <div class="cxcard">
-      <div class="ic">🎤</div>
-      <h4>Участники команды</h4>
-      <ul>
-        <li><span class="d">◆</span><span>следить за атмосферой любви и порядка в команде;</span></li>
-        <li><span class="d">◆</span><span>поддерживать личный позитивный настрой;</span></li>
-        <li><span class="d">◆</span><span>возрастать в духе и вере, пребывая в учении (горницы, кафедра);</span></li>
-        <li><span class="d">◆</span><span>формировать христианский музыкальный вкус;</span></li>
-        <li><span class="d">◆</span><span>готовить к служению своё сердце и мысли;</span></li>
-        <li><span class="d">◆</span><span>планировать время так, чтобы не опаздывать на репетиции;</span></li>
-        <li><span class="d">◆</span><span>приходить на репетицию подготовленным.</span></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="chapter"><div class="chnum">03</div><h3>Ценности</h3></div>
-  <div class="cx2">
-    <div class="cxcard">
-      <div class="ic">✈️</div>
-      <h4>Приоритеты · два крыла самолёта</h4>
-      <p>Служение прославления держится на двух крыльях — профессионализм и духовность. Их важно развивать параллельно.</p>
-      <ul>
-        <li><span class="d">◆</span><span><b>Профессионализм</b> — музыкальная компетенция, хорошая подготовка, выученные песни и партии, рост навыков.</span></li>
-        <li><span class="d">◆</span><span><b>Духовность</b> — правильное положение сердца перед Богом, смирение и кротость, импровизация в духе, атмосфера хвалы через личное поклонение.</span></li>
-      </ul>
-    </div>
-    <div class="cxcard">
-      <div class="ic">🤝</div>
-      <h4>Взаимоотношения</h4>
-      <p>Члены команды в доверии следуют за лидером, который следует за Богом. Решения лидера принимаются с миром, а лидеру помогают в служении.</p>
-      <p>Отношения между собой строятся на взаимном понимании, любви и почтении.</p>
-    </div>
-  </div>
-</div></section>
-
 <!-- СТРУКТУРА -->
 <section><div class="wrap">
   <p class="eyebrow">Структура</p>
@@ -411,12 +351,12 @@
     <div class="orgcard">
       <div class="role">🎙️ Лидеры поклонения</div>
       <div class="orgpeople">
-        <div class="orgperson"><div class="pic"><img src="photos/den.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></div><div class="nm">Денис Федосеев</div></div>
         <div class="orgperson"><div class="pic"><img src="photos/olya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='О'"></div><div class="nm">Оля Оленькова</div></div>
-        <div class="orgperson"><div class="pic"><img src="photos/anya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></div><div class="nm">Аня Воронина</div></div>
         <div class="orgperson"><div class="pic"><img src="photos/kostya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='К'"></div><div class="nm">Константин Попов</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/den.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></div><div class="nm">Денис Федосеев</div></div>
         <div class="orgperson"><div class="pic"><img src="photos/anya-kudrina.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></div><div class="nm">Аня Кудрина</div></div>
         <div class="orgperson"><div class="pic"><img src="photos/yovita.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Y'"></div><div class="nm">Yovita Chrismira</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/anya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></div><div class="nm">Аня Воронина</div></div>
       </div>
       <div class="func">Сольное ведение песни</div>
     </div>
@@ -439,8 +379,8 @@
         <div class="orgperson"><div class="pic"><img src="photos/sasha.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></div><div class="nm">Александр Осипов</div></div>
         <div class="orgperson"><div class="pic"><img src="photos/olesya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='О'"></div><div class="nm">Олеся Саетгареева</div></div>
         <div class="orgperson"><div class="pic"><img src="photos/pasha.jpg" alt="" onerror="this.remove();this.parentNode.textContent='П'"></div><div class="nm">Паша Алексейков</div></div>
-        <div class="orgperson"><div class="pic"><img src="photos/daniel.jpg" alt="" onerror="this.remove();this.parentNode.textContent='D'"></div><div class="nm">Daniel</div></div>
-        <div class="orgperson"><div class="pic">B</div><div class="nm">Brian</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/daniel.jpg" alt="" onerror="this.remove();this.parentNode.textContent='D'"></div><div class="nm">Daniel Bendon</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/brian.jpg" alt="" onerror="this.remove();this.parentNode.textContent='B'"></div><div class="nm">Brian Nababan</div></div>
       </div>
       <div class="func">Гитара · клавиши · бас-гитара · кахон · барабаны</div>
     </div>
@@ -461,32 +401,8 @@
   <div class="dirs">
     <div class="dir"><span class="ic">🤝</span><div><h4>Уважай других участников</h4><p>Приходи на репетиции вовремя и готовым, не отвлекайся в процессе.</p></div></div>
     <div class="dir"><span class="ic">🕊️</span><div><h4>Будь в духе</h4><p>Следи за состоянием своего духа и помни: атмосфера в команде зависит от тебя.</p></div></div>
-  </div>
-</div></section>
-
-<!-- РЕГЛАМЕНТ РЕПЕТИЦИЙ -->
-<section><div class="wrap">
-  <p class="eyebrow">Регламент</p>
-  <h2 class="h2">Правила поведения на репетиции</h2>
-  <div class="rules">
-    <div class="rcol yes">
-      <h3>❣️ Что важно</h3>
-      <ul>
-        <li><span class="mk">✓</span><span>Включённость и вовлечённость на протяжении всей репетиции.</span></li>
-        <li><span class="mk">✓</span><span>Телефон — только для нот и текста.</span></li>
-        <li><span class="mk">✓</span><span>Заранее учить партии и тексты, чтобы не тратить оплаченное церковью время.</span></li>
-        <li><span class="mk">✓</span><span>Соблюдать порядок в ходе репетиции, следуя за лидером.</span></li>
-      </ul>
-    </div>
-    <div class="rcol no">
-      <h3>❌ Чего не делаем</h3>
-      <ul>
-        <li><span class="mk">✗</span><span>Соц. сети, работа, переписки во время репетиции.</span></li>
-        <li><span class="mk">✗</span><span>Курение и еда во время репетиции.</span></li>
-        <li><span class="mk">✗</span><span>Опоздания.</span></li>
-        <li><span class="mk">✗</span><span>Нецензурная брань и негатив — они оскверняют Божью среду.</span></li>
-      </ul>
-    </div>
+    <div class="dir"><span class="ic">🎼</span><div><h4>Знай свою партию</h4><p>Каждый отвечает за свою партию — вокальную или инструментальную — и знает её твёрдо.</p></div></div>
+    <div class="dir"><span class="ic">🎸</span><div><h4>Заботься об инструменте</h4><p>Ответственный за свой инструмент: расчехлить, собрать, зачехлить, упаковать и убрать.</p></div></div>
   </div>
 </div></section>
 
@@ -494,10 +410,44 @@
 <section><div class="wrap">
   <p class="eyebrow">На вход · онбординг</p>
   <h2 class="h2">С чего начать новому левиту</h2>
-  <p class="lead">Всё, с чего начинается путь в служении: кодекс левита и школа прославления.</p>
-  <div class="res">
-    <a class="rcard" href="#codex"><div class="ic">📜</div><h4>Кодекс левита</h4><p>Ценности и образ успешного служителя хвалы — с чего начинается прославленец.</p><span class="go">Открыть →</span></a>
-    <a class="rcard" href="https://t.me/+9vxnF4TdZi02NjUy" target="_blank" rel="noopener"><div class="ic">🎓</div><h4>Школа прославления</h4><p>Полноценное обучение служению хвалы и поклонения.</p><span class="go">Перейти →</span></a>
+  <p class="lead">Всё, с чего начинается путь в служении. Нажми на нужное — раскроется.</p>
+  <div class="accs">
+
+    <details class="acc" id="codex">
+      <summary><span class="ac-ic">📜</span><span class="ac-tt"><b>Кодекс левита</b><small>Образ успешного служителя хвалы</small></span><span class="ac-go"><span class="lo">Открыть</span><span class="lc">Свернуть</span><span class="chev">▾</span></span></summary>
+      <div class="acc-body">
+        <div class="chapter"><div class="chnum">01</div><h3>Компетенция</h3></div>
+        <p class="chlead">Компетенция в команде прославления делится на три вида: духовная, душевная и физическая.</p>
+        <div class="cx3">
+          <div class="cxcard"><div class="ic">🙏</div><h4>Духовная</h4><p class="sub2">Участвовать в команде хвалы могут члены церкви, которые:</p><ul><li><span class="d">◆</span><span>верят в Иисуса Христа как единственный путь к Богу;</span></li><li><span class="d">◆</span><span>возрастают в Благой Вести, посещают горницы;</span></li><li><span class="d">◆</span><span>любят поклоняться и имеют личные отношения с Богом.</span></li></ul></div>
+          <div class="cxcard"><div class="ic">💛</div><h4>Душевная</h4><p class="sub2">Каждый несёт ответственность за Божью атмосферу в команде — это:</p><ul><li><span class="d">◆</span><span>умение и желание побеждать свои эмоции;</span></li><li><span class="d">◆</span><span>покрывать недостатки других участников;</span></li><li><span class="d">◆</span><span>гасить, а не поддерживать конфликты.</span></li></ul></div>
+          <div class="cxcard"><div class="ic">🎼</div><h4>Физическая</h4><p class="sub2">Музыкальный навык, которым ты служишь:</p><ul><li><span class="d">◆</span><span>уровень выше начального — чтобы быть гибким и легко реагировать на изменения;</span></li><li><span class="d">◆</span><span>если уровень не позволяет импровизировать и подстраиваться — развивать навык;</span></li><li><span class="d">◆</span><span>растить музыкальность, вкус и наслушанность христианских песен.</span></li></ul></div>
+        </div>
+        <div class="chapter"><div class="chnum">02</div><h3>Ответственность</h3></div>
+        <div class="cx2">
+          <div class="cxcard"><div class="ic">👑</div><h4>Лидеры команды прославления</h4><ul><li><span class="d">◆</span><span>следить за духовным состоянием участников;</span></li><li><span class="d">◆</span><span>следить за атмосферой в команде, поддерживать мир и радость;</span></li><li><span class="d">◆</span><span>помогать возрастать новым участникам;</span></li><li><span class="d">◆</span><span>быть духовным примером в поведении и служении;</span></li><li><span class="d">◆</span><span>формировать и утверждать репертуар;</span></li><li><span class="d">◆</span><span>определять состав команды прославления.</span></li></ul></div>
+          <div class="cxcard"><div class="ic">🎤</div><h4>Участники команды</h4><ul><li><span class="d">◆</span><span>следить за атмосферой любви и порядка в команде;</span></li><li><span class="d">◆</span><span>поддерживать личный позитивный настрой;</span></li><li><span class="d">◆</span><span>возрастать в духе и вере, пребывая в учении (горницы, кафедра);</span></li><li><span class="d">◆</span><span>формировать христианский музыкальный вкус;</span></li><li><span class="d">◆</span><span>готовить к служению своё сердце и мысли;</span></li><li><span class="d">◆</span><span>планировать время так, чтобы не опаздывать на репетиции;</span></li><li><span class="d">◆</span><span>приходить на репетицию подготовленным.</span></li></ul></div>
+        </div>
+        <div class="chapter"><div class="chnum">03</div><h3>Ценности</h3></div>
+        <div class="cx2">
+          <div class="cxcard"><div class="ic">✈️</div><h4>Приоритеты · два крыла самолёта</h4><p>Служение прославления держится на двух крыльях — профессионализм и духовность. Их важно развивать параллельно.</p><ul><li><span class="d">◆</span><span><b>Профессионализм</b> — музыкальная компетенция, хорошая подготовка, выученные песни и партии, рост навыков.</span></li><li><span class="d">◆</span><span><b>Духовность</b> — правильное положение сердца перед Богом, смирение и кротость, импровизация в духе, атмосфера хвалы через личное поклонение.</span></li></ul></div>
+          <div class="cxcard"><div class="ic">🤝</div><h4>Взаимоотношения</h4><p>Члены команды в доверии следуют за лидером, который следует за Богом. Решения лидера принимаются с миром, а лидеру помогают в служении.</p><p>Отношения между собой строятся на взаимном понимании, любви и почтении.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <a class="acc acc-link" href="https://t.me/+9vxnF4TdZi02NjUy" target="_blank" rel="noopener"><span class="ac-ic">🎓</span><span class="ac-tt"><b>Школа прославления</b><small>Полноценное обучение служению хвалы и поклонения</small></span><span class="ac-go">Перейти →</span></a>
+
+    <details class="acc" id="rules">
+      <summary><span class="ac-ic">📋</span><span class="ac-tt"><b>Правила репетиции</b><small>Почтение к Богу и коллективу</small></span><span class="ac-go"><span class="lo">Открыть</span><span class="lc">Свернуть</span><span class="chev">▾</span></span></summary>
+      <div class="acc-body">
+        <div class="rules">
+          <div class="rcol yes"><h3>❣️ Что важно</h3><ul><li><span class="mk">✓</span><span>Включённость и вовлечённость на протяжении всей репетиции.</span></li><li><span class="mk">✓</span><span>Телефон — только для нот и текста.</span></li><li><span class="mk">✓</span><span>Заранее учить партии и тексты, чтобы не тратить оплаченное церковью время.</span></li><li><span class="mk">✓</span><span>Соблюдать порядок в ходе репетиции, следуя за лидером.</span></li></ul></div>
+          <div class="rcol no"><h3>❌ Чего не делаем</h3><ul><li><span class="mk">✗</span><span>Соц. сети, работа, переписки во время репетиции.</span></li><li><span class="mk">✗</span><span>Курение и еда во время репетиции.</span></li><li><span class="mk">✗</span><span>Опоздания.</span></li><li><span class="mk">✗</span><span>Нецензурная брань и негатив — они оскверняют Божью среду.</span></li></ul></div>
+        </div>
+      </div>
+    </details>
+
   </div>
 </div></section>
 
@@ -505,7 +455,7 @@
 <section><div class="wrap">
   <div class="final">
     <h2>Здесь совершается победа</h2>
-    <p class="fverse">«Буду возвещать имя Твое братьям моим, посреди собрания буду хвалить Тебя».<b>Псалом 21:23</b></p>
+    <p class="fverse">«Буду возвещать имя Твое братьям моим, посреди собрания буду&nbsp;хвалить&nbsp;Тебя».<b>Псалом 21:23</b></p>
     <div class="creed">
       <div>Наш талант — наше оружие</div>
       <div>Наша музыка — наше служение</div>
