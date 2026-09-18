@@ -256,9 +256,19 @@
     .acc .lo,.acc .lc{display:none}
     .acc-body{padding:4px 16px 22px}
   }
-  /* headings left, incl. final */
-  .final{text-align:left}
-  .final .fverse{margin-left:0;margin-right:0}
+  /* final centered */
+  .final{text-align:center}
+  .final .fverse{margin-left:auto;margin-right:auto}
+  .creed{align-items:center}
+  /* language switcher */
+  .langbar{position:sticky;top:0;z-index:60;display:flex;justify-content:center;gap:8px;padding:9px 8px;background:rgba(7,6,15,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(44,36,86,.5)}
+  .langbar .lb{font-family:'Unbounded';font-size:12px;font-weight:600;color:#c9a8ff;background:transparent;border:1px solid var(--line);border-radius:20px;padding:6px 15px;cursor:pointer;transition:.2s}
+  .langbar .lb:hover{border-color:var(--gold);color:#fff}
+  .langbar .lb.active{background:var(--gradgold);color:#2a1400;border-color:transparent}
+  #google_translate_element{display:none}
+  .goog-te-banner-frame,.goog-te-gadget-icon,.goog-logo-link,.goog-te-balloon-frame{display:none!important}
+  .goog-text-highlight{background:none!important;box-shadow:none!important}
+  body{top:0!important}
   .rolecard:hover{border-color:var(--acc);box-shadow:var(--glow)}
   .rolecard .rt{font-family:'Unbounded';font-size:17px;margin:0 0 3px;display:flex;align-items:center;gap:9px}
   .rolecard .rf{color:#ffe19a;font-size:12.5px;font-weight:700;margin:0 0 16px}
@@ -277,15 +287,23 @@
 </head>
 <body>
 
+<!-- LANG SWITCHER -->
+<div class="langbar notranslate" translate="no">
+  <button class="lb ru" onclick="setLang('ru')">RU</button>
+  <button class="lb en" onclick="setLang('en')">EN</button>
+  <button class="lb id" onclick="setLang('id')">ID</button>
+</div>
+<div id="google_translate_element"></div>
+
 <!-- HERO -->
 <div class="hero">
   <div class="rays"></div>
   <div class="notes"><span>♪</span><span>♫</span><span>♩</span><span>♬</span><span>♪</span><span>♫</span></div>
   <div class="wrap">
-  <div class="crown"><svg viewBox="0 0 100 100" width="48" height="48" fill="none" stroke="#fff" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" aria-label="Церковь Любовь Христа"><path d="M50 84 C 22 62, 9 43, 9 28 C 9 15, 20 8, 30 8 C 39 8, 46 15, 50 22 C 54 15, 61 8, 70 8 C 80 8, 91 15, 91 28 C 91 43, 78 62, 50 84 Z"/><path d="M51 30 L61 30 L61 41 L69 41 L69 50 L61 50 L61 64 L51 64 L51 50 L43 50 L43 41 L51 41 Z"/></svg></div>
+  <div class="crown"><svg viewBox="0 0 100 100" width="48" height="48" fill="none" stroke="#fff" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" aria-label="Церковь Любовь Христа"><path d="M50 84 C 22 62, 9 43, 9 28 C 9 15, 20 8, 30 8 C 39 8, 46 15, 50 22 C 54 15, 61 8, 70 8 C 80 8, 91 15, 91 28 C 91 43, 78 62, 50 84 Z"/><path d="M54 27 L64 27 L64 41 L73 41 L73 51 L64 51 L64 74 L54 74 L54 51 L45 51 L45 41 L54 41 Z"/></svg></div>
   <p class="eyebrow">Служение церкви</p>
   <h1>Служение <span class="gradg">прославления</span></h1>
-  <div class="sub">Церковь «Любовь Христа»</div>
+  <div class="sub">Церковь «Любовь Христа» · Бали</div>
   <p>Мы призваны служить Господу в хвале и поклонении. Это служение престола, которое меняет атмосферу — и приходит духовная победа: в себе, в команде, в церкви.</p>
 </div></div>
 
@@ -331,25 +349,25 @@
   <div class="keyverse kv-left">«Впереди шли поющие, позади играющие на орудиях, в средине девы с тимпанами»<b>Псалтирь 67:26</b></div>
   <div class="orgtree">
     <div class="orgcard top">
-      <div class="role">🕊️ Духовный лидер прославления</div>
+      <div class="role">Духовный лидер прославления</div>
       <div class="orgpeople"><div class="orgperson"><div class="pic g"><img src="photos/den.jpg" alt="Денис Федосеев" onerror="this.remove();this.parentNode.textContent='Д'"></div><div class="nm">Денис Федосеев</div></div></div>
       <div class="func">Духовное направление и воспитание команды</div>
     </div>
     <div class="stem"></div>
     <div class="orgcard">
-      <div class="role">👑 Лидер прославления</div>
+      <div class="role">Лидер прославления</div>
       <div class="orgpeople"><div class="orgperson"><div class="pic"><img src="photos/olya.jpg" alt="Оля Оленькова" onerror="this.remove();this.parentNode.textContent='О'"></div><div class="nm">Оля Оленькова</div></div></div>
       <div class="func">Организация работы команды и связь с внешними служениями</div>
     </div>
     <div class="stem p"></div>
     <div class="orgcard">
-      <div class="role">🛡️ Зам. лидера прославления</div>
+      <div class="role">Зам. лидера прославления</div>
       <div class="orgpeople"><div class="orgperson"><div class="pic"><img src="photos/kostya.jpg" alt="Константин Попов" onerror="this.remove();this.parentNode.textContent='К'"></div><div class="nm">Константин Попов</div></div></div>
       <div class="func">Исполнение некоторых функций лидера прославления</div>
     </div>
     <div class="stem p"></div>
     <div class="orgcard">
-      <div class="role">🎙️ Лидеры поклонения</div>
+      <div class="role">Лидеры поклонения</div>
       <div class="orgpeople">
         <div class="orgperson"><div class="pic"><img src="photos/olya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='О'"></div><div class="nm">Оля Оленькова</div></div>
         <div class="orgperson"><div class="pic"><img src="photos/kostya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='К'"></div><div class="nm">Константин Попов</div></div>
@@ -362,7 +380,7 @@
     </div>
     <div class="stem p"></div>
     <div class="orgcard">
-      <div class="role">🎤 Вокалисты</div>
+      <div class="role">Вокалисты</div>
       <div class="orgpeople">
         <div class="orgperson"><div class="pic"><img src="photos/yulya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Ю'"></div><div class="nm">Юля Рыжова</div></div>
         <div class="orgperson"><div class="pic"><img src="photos/dayana.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></div><div class="nm">Даяна Федотова</div></div>
@@ -372,7 +390,7 @@
     </div>
     <div class="stem p"></div>
     <div class="orgcard">
-      <div class="role">🎸 Музыканты</div>
+      <div class="role">Музыканты</div>
       <div class="orgpeople">
         <div class="orgperson"><div class="pic"><img src="photos/kostya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='К'"></div><div class="nm">Константин Попов</div></div>
         <div class="orgperson"><div class="pic"><img src="photos/anya-kudrina.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></div><div class="nm">Аня Кудрина</div></div>
@@ -386,9 +404,9 @@
     </div>
     <div class="stem p"></div>
     <div class="orgcard">
-      <div class="role">🗂️ Администратор команды</div>
+      <div class="role">Администратор команды</div>
       <div class="orgpeople"><div class="orgperson"><div class="pic"><img src="photos/darya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></div><div class="nm">Дарья Жуковская</div></div></div>
-      <div class="func">Букинг реп-точки · оплата · анонсы</div>
+      <div class="func">Букинг реп. точки · оплата · анонсы</div>
     </div>
   </div>
 </div></section>
@@ -464,6 +482,29 @@
   </div>
 </div></section>
 
-<div class="foot wrap">Служение прославления · Церковь «Любовь Христа»</div>
+<div class="foot wrap">Служение прославления · Церковь «Любовь Христа» · Бали</div>
+
+<script>
+function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'ru',includedLanguages:'ru,en,id',autoDisplay:false},'google_translate_element');}
+function setLang(l){
+  var host=location.hostname;
+  if(l==='ru'){
+    ['','domain='+host+';','domain=.'+host+';'].forEach(function(d){document.cookie='googtrans=;path=/;'+d+'max-age=0';});
+  }else{
+    var v='/ru/'+l;
+    document.cookie='googtrans='+v+';path=/';
+    document.cookie='googtrans='+v+';path=/;domain='+host;
+    document.cookie='googtrans='+v+';path=/;domain=.'+host;
+  }
+  location.reload();
+}
+(function(){
+  var m=document.cookie.match(/googtrans=\/ru\/(\w+)/);var l=m?m[1]:'ru';
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.querySelector('.langbar .lb.'+l);if(b)b.classList.add('active');
+  });
+})();
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
