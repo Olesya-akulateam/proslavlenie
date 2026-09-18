@@ -215,6 +215,20 @@
   .branch.b3:before{left:16.66%;right:16.66%}
   .midrole{width:100%;text-align:center;border-color:rgba(245,196,81,.45);box-shadow:var(--glowg)}
   .midrole .rt,.midrole .people{justify-content:center}
+  /* vertical org tree — должность / фото / имя / функция */
+  .keyverse.kv-left{text-align:left;margin-left:0;margin-right:0}
+  .orgtree{display:flex;flex-direction:column;align-items:center;margin-top:26px}
+  .orgcard{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px 26px;text-align:center;transition:.25s}
+  .orgcard:hover{border-color:var(--acc);box-shadow:var(--glow)}
+  .orgcard.top{border-color:rgba(245,196,81,.5);box-shadow:var(--glowg)}
+  .orgcard .role{font-family:'Unbounded';font-size:16px;font-weight:600;color:#fff;margin:0}
+  .orgcard .func{color:var(--mut);font-size:13.5px;margin-top:14px}
+  .orgpeople{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 22px;margin-top:16px}
+  .orgperson{width:92px;text-align:center}
+  .orgperson .pic{width:64px;height:64px;border-radius:50%;overflow:hidden;margin:0 auto 8px;border:2px solid var(--acc);box-shadow:0 0 18px rgba(168,85,247,.35);background:var(--panel2);display:grid;place-items:center;font-family:'Unbounded';font-size:20px;color:#c9a8ff}
+  .orgperson .pic.g{border-color:var(--gold);box-shadow:0 0 18px rgba(245,196,81,.4)}
+  .orgperson .pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .orgperson .nm{font-size:12.5px;font-weight:600;color:#e7e2fb;line-height:1.25}
   .rolecard:hover{border-color:var(--acc);box-shadow:var(--glow)}
   .rolecard .rt{font-family:'Unbounded';font-size:17px;margin:0 0 3px;display:flex;align-items:center;gap:9px}
   .rolecard .rf{color:#ffe19a;font-size:12.5px;font-weight:700;margin:0 0 16px}
@@ -238,7 +252,7 @@
   <div class="rays"></div>
   <div class="notes"><span>♪</span><span>♫</span><span>♩</span><span>♬</span><span>♪</span><span>♫</span></div>
   <div class="wrap">
-  <div class="crown"><svg viewBox="0 0 100 100" width="48" height="48" fill="none" stroke="#fff" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" aria-label="Церковь Любовь Христа"><path d="M50 84 C 22 62, 9 43, 9 28 C 9 15, 20 8, 30 8 C 39 8, 46 15, 50 22 C 54 15, 61 8, 70 8 C 80 8, 91 15, 91 28 C 91 43, 78 62, 50 84 Z"/><path d="M57 32 L67 32 L67 43 L77 43 L77 53 L67 53 L67 73 L57 73 L57 53 L47 53 L47 43 L57 43 Z"/></svg></div>
+  <div class="crown"><svg viewBox="0 0 100 100" width="48" height="48" fill="none" stroke="#fff" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" aria-label="Церковь Любовь Христа"><path d="M50 84 C 22 62, 9 43, 9 28 C 9 15, 20 8, 30 8 C 39 8, 46 15, 50 22 C 54 15, 61 8, 70 8 C 80 8, 91 15, 91 28 C 91 43, 78 62, 50 84 Z"/><path d="M51 30 L61 30 L61 41 L69 41 L69 50 L61 50 L61 64 L51 64 L51 50 L43 50 L43 41 L51 41 Z"/></svg></div>
   <p class="eyebrow">Служение церкви</p>
   <h1>Служение <span class="gradg">прославления</span></h1>
   <div class="sub">Церковь «Любовь Христа»</div>
@@ -247,7 +261,7 @@
 
 <!-- OPENING VERSE -->
 <div class="verseband"><div class="wrap">
-  <p class="q gradg">«Но настанет время и настало уже, когда истинные поклонники будут поклоняться Отцу в духе и истине, ибо таких поклонников Отец ищет Себе»</p>
+  <p class="q gradg">«Но настанет время и настало уже, когда истинные поклонники будут поклоняться Отцу в духе и истине, ибо таких поклонников Отец&nbsp;ищет&nbsp;Себе»</p>
   <cite>Иоанна 4:23</cite>
 </div></div>
 
@@ -282,9 +296,9 @@
 
 <!-- КОДЕКС ЛЕВИТА -->
 <section id="codex"><div class="wrap">
-  <p class="eyebrow center">Кодекс левита</p>
-  <h2 class="h2 center">Образ успешного служителя хвалы</h2>
-  <p class="lead center">Ориентир для каждого в команде прославления. Три опоры служителя: компетенция, ответственность и ценности.</p>
+  <p class="eyebrow">Кодекс левита</p>
+  <h2 class="h2">Образ успешного служителя хвалы</h2>
+  <p class="lead">Ориентир для каждого в команде прославления. Три опоры служителя: компетенция, ответственность и ценности.</p>
 
   <div class="chapter"><div class="chnum">01</div><h3>Компетенция</h3></div>
   <p class="chlead">Компетенция в команде прославления делится на три вида: духовная, душевная и физическая.</p>
@@ -325,7 +339,7 @@
   <div class="cx2">
     <div class="cxcard">
       <div class="ic">👑</div>
-      <h4>Лидер команды прославления</h4>
+      <h4>Лидеры команды прославления</h4>
       <ul>
         <li><span class="d">◆</span><span>следить за духовным состоянием участников;</span></li>
         <li><span class="d">◆</span><span>следить за атмосферой в команде, поддерживать мир и радость;</span></li>
@@ -374,56 +388,67 @@
 <section><div class="wrap">
   <p class="eyebrow">Структура</p>
   <h2 class="h2">Как устроена команда прославления</h2>
-  <div class="keyverse">«Впереди шли поющие, позади играющие на орудиях, в средине девы с тимпанами»<b>Псалтирь 67:26</b></div>
-  <div class="tree">
-    <div class="node top"><div class="npic g"><img src="photos/den.jpg" alt="Денис Федосеев" onerror="this.remove()"></div><div class="r">Денис Федосеев</div><div class="d">Духовный лидер прославления · духовное направление и воспитание команды</div></div>
+  <div class="keyverse kv-left">«Впереди шли поющие, позади играющие на орудиях, в средине девы с тимпанами»<b>Псалтирь 67:26</b></div>
+  <div class="orgtree">
+    <div class="orgcard top">
+      <div class="role">🕊️ Духовный лидер прославления</div>
+      <div class="orgpeople"><div class="orgperson"><div class="pic g"><img src="photos/den.jpg" alt="Денис Федосеев" onerror="this.remove();this.parentNode.textContent='Д'"></div><div class="nm">Денис Федосеев</div></div></div>
+      <div class="func">Духовное направление и воспитание команды</div>
+    </div>
     <div class="stem"></div>
-    <div class="node"><div class="npic"><img src="photos/olya.jpg" alt="Оля Оленькова" onerror="this.remove()"></div><div class="r">Оля Оленькова</div><div class="d">Лидер прославления · организация работы команды и связь с внешними служениями</div></div>
+    <div class="orgcard">
+      <div class="role">👑 Лидер прославления</div>
+      <div class="orgpeople"><div class="orgperson"><div class="pic"><img src="photos/olya.jpg" alt="Оля Оленькова" onerror="this.remove();this.parentNode.textContent='О'"></div><div class="nm">Оля Оленькова</div></div></div>
+      <div class="func">Организация работы команды и связь с внешними служениями</div>
+    </div>
     <div class="stem p"></div>
-    <div class="node"><div class="npic"><img src="photos/kostya.jpg" alt="Константин Попов" onerror="this.remove()"></div><div class="r">Константин Попов</div><div class="d">Зам. лидера прославления · исполнение некоторых функций лидера</div></div>
+    <div class="orgcard">
+      <div class="role">🛡️ Зам. лидера прославления</div>
+      <div class="orgpeople"><div class="orgperson"><div class="pic"><img src="photos/kostya.jpg" alt="Константин Попов" onerror="this.remove();this.parentNode.textContent='К'"></div><div class="nm">Константин Попов</div></div></div>
+      <div class="func">Исполнение некоторых функций лидера прославления</div>
+    </div>
     <div class="stem p"></div>
-    <div class="rolecard midrole">
-      <div class="rt">🎙️ Лидеры поклонения</div>
-      <div class="rf">Сольное ведение песни</div>
-      <div class="people">
-        <span class="person"><span class="pa"><img src="photos/den.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></span>Денис Федосеев</span>
-        <span class="person"><span class="pa"><img src="photos/olya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='О'"></span>Оля Оленькова</span>
-        <span class="person"><span class="pa"><img src="photos/anya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></span>Аня Воронина</span>
-        <span class="person"><span class="pa"><img src="photos/kostya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='К'"></span>Константин Попов</span>
-        <span class="person"><span class="pa"><img src="photos/anya-kudrina.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></span>Аня Кудрина</span>
-        <span class="person"><span class="pa"><img src="photos/yovita.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Y'"></span>Yovita Chrismira</span>
+    <div class="orgcard">
+      <div class="role">🎙️ Лидеры поклонения</div>
+      <div class="orgpeople">
+        <div class="orgperson"><div class="pic"><img src="photos/den.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></div><div class="nm">Денис Федосеев</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/olya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='О'"></div><div class="nm">Оля Оленькова</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/anya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></div><div class="nm">Аня Воронина</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/kostya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='К'"></div><div class="nm">Константин Попов</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/anya-kudrina.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></div><div class="nm">Аня Кудрина</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/yovita.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Y'"></div><div class="nm">Yovita Chrismira</div></div>
       </div>
+      <div class="func">Сольное ведение песни</div>
     </div>
-    <div class="branch b3">
-    <div class="rolecard">
-      <div class="rt">🎤 Вокалисты</div>
-      <div class="rf">Бэк-вокал</div>
-      <div class="people">
-        <span class="person"><span class="pa"><img src="photos/yulya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Ю'"></span>Юля Рыжова</span>
-        <span class="person"><span class="pa"><img src="photos/dayana.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></span>Даяна Федотова</span>
-        <span class="person"><span class="pa"><img src="photos/andry.jpg" alt="" onerror="this.remove();this.parentNode.textContent='A'"></span>Andry Perdana</span>
+    <div class="stem p"></div>
+    <div class="orgcard">
+      <div class="role">🎤 Вокалисты</div>
+      <div class="orgpeople">
+        <div class="orgperson"><div class="pic"><img src="photos/yulya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Ю'"></div><div class="nm">Юля Рыжова</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/dayana.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></div><div class="nm">Даяна Федотова</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/andry.jpg" alt="" onerror="this.remove();this.parentNode.textContent='A'"></div><div class="nm">Andry Perdana</div></div>
       </div>
+      <div class="func">Бэк-вокал</div>
     </div>
-    <div class="rolecard">
-      <div class="rt">🎸 Музыканты</div>
-      <div class="rf">Гитара · клавиши · бас-гитара · кахон · барабаны</div>
-      <div class="people">
-        <span class="person"><span class="pa"><img src="photos/kostya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='К'"></span>Константин Попов</span>
-        <span class="person"><span class="pa"><img src="photos/anya-kudrina.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></span>Аня Кудрина</span>
-        <span class="person"><span class="pa"><img src="photos/sasha.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></span>Александр Осипов</span>
-        <span class="person"><span class="pa"><img src="photos/olesya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='О'"></span>Олеся Саетгареева</span>
-        <span class="person"><span class="pa"><img src="photos/pasha.jpg" alt="" onerror="this.remove();this.parentNode.textContent='П'"></span>Паша</span>
-        <span class="person"><span class="pa"><img src="photos/daniel.jpg" alt="" onerror="this.remove();this.parentNode.textContent='D'"></span>Daniel</span>
-        <span class="person"><span class="pa">B</span>Brian</span>
+    <div class="stem p"></div>
+    <div class="orgcard">
+      <div class="role">🎸 Музыканты</div>
+      <div class="orgpeople">
+        <div class="orgperson"><div class="pic"><img src="photos/kostya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='К'"></div><div class="nm">Константин Попов</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/anya-kudrina.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></div><div class="nm">Аня Кудрина</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/sasha.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></div><div class="nm">Александр Осипов</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/olesya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='О'"></div><div class="nm">Олеся Саетгареева</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/pasha.jpg" alt="" onerror="this.remove();this.parentNode.textContent='П'"></div><div class="nm">Паша Алексейков</div></div>
+        <div class="orgperson"><div class="pic"><img src="photos/daniel.jpg" alt="" onerror="this.remove();this.parentNode.textContent='D'"></div><div class="nm">Daniel</div></div>
+        <div class="orgperson"><div class="pic">B</div><div class="nm">Brian</div></div>
       </div>
+      <div class="func">Гитара · клавиши · бас-гитара · кахон · барабаны</div>
     </div>
-    <div class="rolecard">
-      <div class="rt">🗂️ Администратор команды</div>
-      <div class="rf">Букинг реп-точки · оплата · анонсы</div>
-      <div class="people">
-        <span class="person"><span class="pa"><img src="photos/darya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></span>Дарья Жуковская</span>
-      </div>
-    </div>
+    <div class="stem p"></div>
+    <div class="orgcard">
+      <div class="role">🗂️ Администратор команды</div>
+      <div class="orgpeople"><div class="orgperson"><div class="pic"><img src="photos/darya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></div><div class="nm">Дарья Жуковская</div></div></div>
+      <div class="func">Букинг реп-точки · оплата · анонсы</div>
     </div>
   </div>
 </div></section>
