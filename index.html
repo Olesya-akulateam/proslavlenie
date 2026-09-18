@@ -211,6 +211,10 @@
   .branch>.rolecard{position:relative}
   .branch>.rolecard:before{content:"";position:absolute;top:-30px;left:50%;width:2px;height:30px;transform:translateX(-50%);background:var(--gold)}
   .rolecard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;transition:.25s}
+  .branch.b3{grid-template-columns:repeat(3,1fr)}
+  .branch.b3:before{left:16.66%;right:16.66%}
+  .midrole{width:100%;text-align:center;border-color:rgba(245,196,81,.45);box-shadow:var(--glowg)}
+  .midrole .rt,.midrole .people{justify-content:center}
   .rolecard:hover{border-color:var(--acc);box-shadow:var(--glow)}
   .rolecard .rt{font-family:'Unbounded';font-size:17px;margin:0 0 3px;display:flex;align-items:center;gap:9px}
   .rolecard .rf{color:#ffe19a;font-size:12.5px;font-weight:700;margin:0 0 16px}
@@ -377,8 +381,8 @@
     <div class="node"><div class="npic"><img src="photos/olya.jpg" alt="Оля Оленькова" onerror="this.remove()"></div><div class="r">Оля Оленькова</div><div class="d">Лидер прославления · организация работы команды и связь с внешними служениями</div></div>
     <div class="stem p"></div>
     <div class="node"><div class="npic"><img src="photos/kostya.jpg" alt="Константин Попов" onerror="this.remove()"></div><div class="r">Константин Попов</div><div class="d">Зам. лидера прославления · исполнение некоторых функций лидера</div></div>
-    <div class="branch">
-    <div class="rolecard">
+    <div class="stem p"></div>
+    <div class="rolecard midrole">
       <div class="rt">🎙️ Лидеры поклонения</div>
       <div class="rf">Сольное ведение песни</div>
       <div class="people">
@@ -390,6 +394,7 @@
         <span class="person"><span class="pa"><img src="photos/yovita.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Y'"></span>Yovita Chrismira</span>
       </div>
     </div>
+    <div class="branch b3">
     <div class="rolecard">
       <div class="rt">🎤 Вокалисты</div>
       <div class="rf">Бэк-вокал</div>
@@ -408,7 +413,7 @@
         <span class="person"><span class="pa"><img src="photos/sasha.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></span>Александр Осипов</span>
         <span class="person"><span class="pa"><img src="photos/olesya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='О'"></span>Олеся Саетгареева</span>
         <span class="person"><span class="pa"><img src="photos/pasha.jpg" alt="" onerror="this.remove();this.parentNode.textContent='П'"></span>Паша</span>
-        <span class="person"><span class="pa">D</span>Daniel</span>
+        <span class="person"><span class="pa"><img src="photos/daniel.jpg" alt="" onerror="this.remove();this.parentNode.textContent='D'"></span>Daniel</span>
         <span class="person"><span class="pa">B</span>Brian</span>
       </div>
     </div>
@@ -416,7 +421,7 @@
       <div class="rt">🗂️ Администратор команды</div>
       <div class="rf">Букинг реп-точки · оплата · анонсы</div>
       <div class="people">
-        <span class="person"><span class="pa">Д</span>Дарья Жуковская</span>
+        <span class="person"><span class="pa"><img src="photos/darya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></span>Дарья Жуковская</span>
       </div>
     </div>
     </div>
