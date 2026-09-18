@@ -205,9 +205,12 @@
   .cxcard li{display:flex;gap:9px;align-items:flex-start;padding:5px 0;font-size:14px;color:#cfc7ea;line-height:1.5}
   .cxcard li .d{color:var(--gold);margin-top:1px;flex-shrink:0}
   @media(max-width:860px){.cx3,.cx2{grid-template-columns:1fr}.keyverse{font-size:19px}.chapter h3{font-size:22px}}
-  /* role groups under the tree */
-  .roles{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
-  .rolecard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;transition:.25s}
+  /* role groups — connected hierarchy branch under Костя */
+  .branch{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:100%;margin-top:30px}
+  .branch:before{content:"";position:absolute;top:-30px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--acc2),var(--gold),var(--acc2))}
+  .branch>.rolecard{position:relative}
+  .branch>.rolecard:before{content:"";position:absolute;top:-30px;left:50%;width:2px;height:30px;transform:translateX(-50%);background:var(--gold)}
+  .rolecard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;transition:.25s}
   .rolecard:hover{border-color:var(--acc);box-shadow:var(--glow)}
   .rolecard .rt{font-family:'Unbounded';font-size:17px;margin:0 0 3px;display:flex;align-items:center;gap:9px}
   .rolecard .rf{color:#ffe19a;font-size:12.5px;font-weight:700;margin:0 0 16px}
@@ -215,7 +218,8 @@
   .person{display:flex;align-items:center;gap:8px;background:var(--panel2);border:1px solid var(--line);border-radius:30px;padding:5px 13px 5px 5px;font-size:13px;font-weight:600;color:#e7e2fb}
   .person .pa{width:28px;height:28px;border-radius:50%;overflow:hidden;background:var(--panel);display:grid;place-items:center;font-size:11px;color:#c9a8ff;font-family:'Unbounded';flex-shrink:0;border:1px solid var(--line)}
   .person .pa img{width:100%;height:100%;object-fit:cover}
-  @media(max-width:860px){.roles{grid-template-columns:1fr}}
+  @media(max-width:860px){.branch{grid-template-columns:1fr;margin-top:16px}.branch:before,.branch>.rolecard:before{display:none}}
+  @media(max-width:1000px) and (min-width:861px){.branch{grid-template-columns:repeat(2,1fr);gap:16px}.branch:before,.branch>.rolecard:before{display:none}}
   /* final creed */
   .final .fverse{font-style:italic;font-weight:600;font-size:18px;margin:0 auto 24px;max-width:660px;color:#3a1f00}
   .final .fverse b{display:block;font-style:normal;margin-top:8px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#5a3200}
@@ -373,8 +377,7 @@
     <div class="node"><div class="npic"><img src="photos/olya.jpg" alt="Оля Оленькова" onerror="this.remove()"></div><div class="r">Оля Оленькова</div><div class="d">Лидер прославления · организация работы команды и связь с внешними служениями</div></div>
     <div class="stem p"></div>
     <div class="node"><div class="npic"><img src="photos/kostya.jpg" alt="Константин Попов" onerror="this.remove()"></div><div class="r">Константин Попов</div><div class="d">Зам. лидера прославления · исполнение некоторых функций лидера</div></div>
-  </div>
-  <div class="roles">
+    <div class="branch">
     <div class="rolecard">
       <div class="rt">🎙️ Лидеры поклонения</div>
       <div class="rf">Сольное ведение песни</div>
@@ -404,7 +407,7 @@
         <span class="person"><span class="pa"><img src="photos/anya-kudrina.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></span>Аня Кудрина</span>
         <span class="person"><span class="pa"><img src="photos/sasha.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></span>Александр Осипов</span>
         <span class="person"><span class="pa"><img src="photos/olesya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='О'"></span>Олеся Саетгареева</span>
-        <span class="person"><span class="pa">П</span>Паша</span>
+        <span class="person"><span class="pa"><img src="photos/pasha.jpg" alt="" onerror="this.remove();this.parentNode.textContent='П'"></span>Паша</span>
         <span class="person"><span class="pa">D</span>Daniel</span>
         <span class="person"><span class="pa">B</span>Brian</span>
       </div>
@@ -415,6 +418,7 @@
       <div class="people">
         <span class="person"><span class="pa">Д</span>Дарья Жуковская</span>
       </div>
+    </div>
     </div>
   </div>
 </div></section>
