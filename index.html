@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Служение прославления — Дом левитов</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+  :root{
+    --bg:#08060f; --panel:#130f26; --panel2:#1a1436; --line:#2c2456;
+    --ink:#f4f1ff; --mut:#a99fce;
+    --acc:#a855f7; --acc2:#ec4899; --gold:#f5c451; --cyan:#38d6ff;
+    --grad:linear-gradient(135deg,#a855f7,#ec4899);
+    --gradgold:linear-gradient(135deg,#f5c451,#ec4899);
+    --glow:0 0 50px rgba(168,85,247,.35);
+    --glowg:0 0 46px rgba(245,196,81,.3);
+    --shadow:0 24px 70px rgba(0,0,0,.6);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 'Manrope',-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  h1,h2,h3,.uf{font-family:'Unbounded',sans-serif;letter-spacing:-.02em}
+  .grad{color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+  .gradg{color:transparent;background:var(--gradgold);-webkit-background-clip:text;background-clip:text}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#c9a8ff;margin:0 0 14px}
+  /* hero */
+  .hero{position:relative;text-align:center;padding:100px 0 56px;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:-40% -20% auto;height:760px;
+    background:radial-gradient(50% 55% at 50% 0%,rgba(168,85,247,.4),transparent 70%);z-index:0}
+  .hero:after{content:"";position:absolute;left:50%;top:38%;width:120%;height:1px;transform:translateX(-50%);
+    background:linear-gradient(90deg,transparent,rgba(245,196,81,.5),transparent)}
+  .hero>*{position:relative;z-index:1}
+  /* heaven / stage light rays */
+  .rays{position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:1400px;height:820px;z-index:0;pointer-events:none;
+    background:
+      conic-gradient(from 200deg at 50% 0%,
+        transparent 0deg,rgba(245,196,81,.14) 8deg,transparent 16deg,
+        transparent 26deg,rgba(168,85,247,.16) 34deg,transparent 42deg,
+        transparent 54deg,rgba(245,196,81,.12) 62deg,transparent 70deg,
+        transparent 82deg,rgba(236,72,153,.14) 90deg,transparent 98deg,
+        transparent 110deg,rgba(245,196,81,.14) 118deg,transparent 126deg,
+        transparent 138deg,rgba(168,85,247,.16) 146deg,transparent 154deg);
+    -webkit-mask:radial-gradient(60% 80% at 50% 0%,#000,transparent 75%);
+            mask:radial-gradient(60% 80% at 50% 0%,#000,transparent 75%);
+    animation:sway 14s ease-in-out infinite}
+  @keyframes sway{0%,100%{transform:translateX(-50%) rotate(-2deg)}50%{transform:translateX(-50%) rotate(2deg)}}
+  /* floating musical notes */
+  .notes{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .notes span{position:absolute;font-size:26px;color:rgba(245,196,81,.5);filter:drop-shadow(0 0 12px rgba(245,196,81,.4));animation:rise linear infinite}
+  .notes span:nth-child(1){left:12%;font-size:22px;color:rgba(168,85,247,.55);animation-duration:13s;animation-delay:0s}
+  .notes span:nth-child(2){left:26%;font-size:30px;animation-duration:17s;animation-delay:3s}
+  .notes span:nth-child(3){left:44%;font-size:18px;color:rgba(236,72,153,.55);animation-duration:15s;animation-delay:6s}
+  .notes span:nth-child(4){left:63%;font-size:28px;animation-duration:19s;animation-delay:1.5s}
+  .notes span:nth-child(5){left:78%;font-size:20px;color:rgba(168,85,247,.55);animation-duration:14s;animation-delay:4.5s}
+  .notes span:nth-child(6){left:89%;font-size:24px;animation-duration:18s;animation-delay:8s}
+  @keyframes rise{0%{top:105%;opacity:0;transform:translateY(0) rotate(0deg)}
+    10%{opacity:1}90%{opacity:1}100%{top:-12%;opacity:0;transform:translateY(0) rotate(18deg)}}
+  @media(prefers-reduced-motion:reduce){.rays,.notes span{animation:none}}
+  .crown{width:78px;height:78px;margin:0 auto 24px;border-radius:24px;display:grid;place-items:center;font-size:36px;
+    background:var(--gradgold);box-shadow:var(--glowg)}
+  .hero h1{font-size:64px;line-height:1.03;margin:0 0 16px;font-weight:800}
+  .hero .sub{display:inline-block;font-family:'Unbounded';font-size:20px;font-weight:600;color:#fff;
+    padding:10px 24px;border-radius:40px;border:1px solid rgba(245,196,81,.45);background:rgba(245,196,81,.08);
+    box-shadow:0 0 30px rgba(245,196,81,.22);margin-bottom:22px}
+  .hero p{font-size:18px;color:var(--mut);max-width:740px;margin:0 auto}
+  /* opening verse */
+  .verseband{position:relative;text-align:center;padding:56px 0}
+  .verseband .q{font-family:'Unbounded';font-size:29px;line-height:1.32;font-weight:600;max-width:920px;margin:0 auto 16px}
+  .verseband cite{color:transparent;background:var(--gradgold);-webkit-background-clip:text;background-clip:text;
+    font-style:normal;font-weight:800;font-size:15px;letter-spacing:.14em;text-transform:uppercase;font-family:'Unbounded'}
+  /* sections */
+  section{padding:62px 0;position:relative;border-top:1px solid rgba(44,36,86,.6)}
+  .h2{font-size:38px;font-weight:700;margin:0 0 14px;line-height:1.1}
+  .lead{color:var(--mut);font-size:18px;max-width:840px;margin:0 0 34px}
+  .center{text-align:center;margin-left:auto;margin-right:auto}
+  /* quality chips */
+  .quals{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .qual{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:28px 20px;text-align:center;transition:.25s}
+  .qual:hover{border-color:var(--acc);box-shadow:var(--glow);transform:translateY(-4px)}
+  .qual .ic{font-size:30px}
+  .qual h4{font-family:'Unbounded';font-size:17px;margin:14px 0 8px}
+  .qual p{margin:0;color:var(--mut);font-size:14px}
+  /* victory flow */
+  .banner{background:linear-gradient(135deg,rgba(168,85,247,.16),rgba(236,72,153,.1));border:1px solid var(--line);border-radius:24px;
+    padding:48px 44px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--glow)}
+  .banner .bgimg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.14;z-index:0}
+  .banner>*{position:relative;z-index:1}
+  .banner .ic{font-size:38px}
+  .banner h3{font-family:'Unbounded';font-size:28px;margin:12px 0 12px;font-weight:600}
+  .banner p{color:#d9d2f2;max-width:680px;margin:0 auto 6px;font-size:17px}
+  .flow{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:26px}
+  .fstep{background:rgba(19,15,38,.72);border:1px solid var(--line);border-radius:18px;padding:20px 26px;text-align:center;min-width:180px;transition:.25s}
+  .fstep:hover{border-color:var(--gold);box-shadow:var(--glowg)}
+  .fstep .ic{font-size:26px}
+  .fstep h4{font-family:'Unbounded';margin:10px 0 2px;font-size:16px}
+  .fstep p{margin:0;color:var(--mut);font-size:13px}
+  .arrow{font-size:24px;color:var(--gold)}
+  /* org tree */
+  .tree{display:flex;flex-direction:column;align-items:center;margin-top:10px}
+  .node{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 24px;text-align:center;min-width:260px}
+  .node.top{border-color:var(--gold);box-shadow:var(--glowg)}
+  .node .r{font-family:'Unbounded';font-size:17px;font-weight:600;color:#fff}
+  .node .d{font-size:13px;color:var(--mut);margin-top:2px}
+  .npic{width:64px;height:64px;border-radius:50%;overflow:hidden;margin:0 auto 10px;border:2px solid var(--acc);box-shadow:0 0 22px rgba(168,85,247,.4)}
+  .npic.g{border-color:var(--gold);box-shadow:0 0 22px rgba(245,196,81,.45)}
+  .npic img{width:100%;height:100%;object-fit:cover;display:block}
+  .stem{width:2px;height:26px;background:linear-gradient(var(--gold),transparent)}
+  .stem.p{background:linear-gradient(var(--acc),transparent)}
+  /* team */
+  .team{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .member{text-align:center}
+  .pw{position:relative;width:100%;aspect-ratio:1;border-radius:20px;overflow:hidden;
+    background:var(--panel2);border:1px solid var(--line);display:grid;place-items:center;transition:.25s}
+  .member:hover .pw{border-color:var(--acc);box-shadow:var(--glow);transform:translateY(-4px)}
+  .pw .ph-init{font-family:'Unbounded';font-size:40px;color:#c9a8ff;opacity:.5}
+  .pw img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .pw:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,6,15,.55))}
+  .m-name{font-family:'Unbounded';font-weight:600;font-size:17px;margin:14px 0 4px}
+  .m-role{color:#c9a8ff;font-size:13.5px;font-weight:600;line-height:1.3}
+  /* duties */
+  .dirs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .dir{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 22px;display:flex;gap:14px;align-items:flex-start;transition:.2s}
+  .dir:hover{border-color:var(--acc);box-shadow:0 0 26px rgba(168,85,247,.22)}
+  .dir .ic{font-size:24px;line-height:1}
+  .dir h4{font-family:'Unbounded';font-size:16px;margin:0 0 4px}
+  .dir p{margin:0;color:var(--mut);font-size:14px;line-height:1.45}
+  /* codex principles */
+  .princ{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .pcard{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:30px;position:relative;overflow:hidden;transition:.25s}
+  .pcard:hover{border-color:var(--acc);box-shadow:var(--glow)}
+  .pcard:before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gradgold)}
+  .pcard .ic{font-size:34px}
+  .pcard h3{font-family:'Unbounded';font-size:22px;margin:14px 0 10px}
+  .pcard p{margin:0 0 14px;color:#d9d2f2;font-size:15px}
+  .pcard .verse{border-left:2px solid var(--gold);padding:4px 0 4px 16px;color:#ffe19a;font-style:italic;font-size:14.5px}
+  /* rehearsal rules */
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .rcol{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:30px 28px}
+  .rcol.yes{border-color:rgba(56,214,120,.35)}
+  .rcol.no{border-color:rgba(236,72,153,.35)}
+  .rcol h3{font-family:'Unbounded';font-size:20px;margin:0 0 18px;display:flex;align-items:center;gap:10px}
+  .rcol.yes h3{color:#7ef2a6}
+  .rcol.no h3{color:#ff9dc6}
+  .rcol ul{list-style:none;margin:0;padding:0}
+  .rcol li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;border-top:1px solid rgba(44,36,86,.5);font-size:15px;color:#e7e2fb}
+  .rcol li:first-of-type{border-top:none}
+  .rcol .mk{font-size:16px;flex-shrink:0;margin-top:1px}
+  .rcol.yes .mk{color:#4ade80} .rcol.no .mk{color:#f472b6}
+  /* resources */
+  .res{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .rcard{display:block;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px 24px;transition:.22s}
+  .rcard:hover{border-color:var(--gold);box-shadow:var(--glowg);transform:translateY(-3px)}
+  .rcard .ic{font-size:28px}
+  .rcard h4{font-family:'Unbounded';font-size:17px;margin:12px 0 6px}
+  .rcard p{margin:0 0 12px;color:var(--mut);font-size:14px}
+  .rcard .go{font-weight:700;font-size:13px;color:transparent;background:var(--gradgold);-webkit-background-clip:text;background-clip:text;letter-spacing:.04em}
+  /* scripture */
+  .scripts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .sc{background:linear-gradient(180deg,rgba(168,85,247,.08),transparent);border:1px solid var(--line);border-radius:18px;padding:28px}
+  .sc p{font-style:italic;font-size:16.5px;line-height:1.5;margin:0 0 14px;color:var(--ink)}
+  .sc cite{color:transparent;background:var(--gradgold);-webkit-background-clip:text;background-clip:text;font-style:normal;font-weight:800;font-size:12.5px;letter-spacing:.08em;font-family:'Unbounded'}
+  /* closing */
+  .final{background:var(--gradgold);border-radius:26px;padding:58px 44px;text-align:center;color:#2a1400;margin-top:10px;box-shadow:var(--glowg);position:relative;overflow:hidden}
+  .final h2{font-size:34px;margin:0 0 14px;color:#2a1400}
+  .final p{font-size:19px;margin:0 auto;max-width:700px;color:#3a1f00;font-weight:600}
+  .foot{color:var(--mut);text-align:center;font-size:13px;padding:34px 0}
+  @media(max-width:860px){
+    .quals,.dirs,.princ,.scripts,.team,.rules,.res{grid-template-columns:1fr 1fr}
+    .hero{padding:74px 0 44px} .hero h1{font-size:42px} .hero .sub{font-size:17px}
+    .h2{font-size:28px} .verseband{padding:42px 0} .verseband .q{font-size:22px}
+    section{padding:48px 0}
+    .flow{flex-direction:column;gap:12px} .flow .arrow{display:none}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 16px}
+    .hero{padding:56px 0 36px} .hero h1{font-size:32px} .crown{width:60px;height:60px;font-size:28px;border-radius:18px}
+    .hero .sub{font-size:15px;padding:8px 16px} .hero p{font-size:16px}
+    .h2{font-size:23px} .lead{font-size:15.5px} .eyebrow{letter-spacing:.16em}
+    .verseband .q{font-size:19px}
+    .quals,.dirs,.scripts,.princ,.rules,.res{grid-template-columns:1fr}
+    .team{grid-template-columns:1fr 1fr}
+    .node,.node.top{min-width:0;width:100%}
+    .fstep{min-width:0;width:100%}
+    .pcard,.rcol{padding:24px} .banner{padding:32px 22px} .final{padding:40px 22px}
+    .final h2{font-size:25px} .final p{font-size:17px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="rays"></div>
+  <div class="notes"><span>♪</span><span>♫</span><span>♩</span><span>♬</span><span>♪</span><span>♫</span></div>
+  <div class="wrap">
+  <div class="crown">👑</div>
+  <p class="eyebrow">Служение церкви</p>
+  <h1>Служение <span class="gradg">прославления</span></h1>
+  <div class="sub">Дом левитов</div>
+  <p>Мы призваны служить Господу в хвале и поклонении. Здесь высвобождается слово, что возбуждает веру в сердцах, меняется атмосфера зала — и рождается победа: в себе, в команде, в церкви.</p>
+</div></div>
+
+<!-- OPENING VERSE -->
+<div class="verseband"><div class="wrap">
+  <p class="q gradg">«Впереди шли поющие, позади играющие на орудиях, в средине девы с тимпанами»</p>
+  <cite>Псалтирь 67:26</cite>
+</div></div>
+
+<!-- СУТЬ -->
+<section><div class="wrap">
+  <p class="eyebrow">Суть</p>
+  <h2 class="h2">Служение престола: высвобождение слова</h2>
+  <p class="lead">Прославление — это служение престола. Через хвалу высвобождается слово, которое должно возбудить веру в человеке. Всё, чем Бог одарил тебя — дары и таланты — не остаётся при тебе: ты высвобождаешь это в зал. А то, какого ты духа, определяет всю твою жизнь и всё твоё служение.</p>
+  <div class="quals">
+    <div class="qual"><div class="ic">🔥</div><h4>Высвобождение слова</h4><p>Слово с престола возбуждает веру в человеке.</p></div>
+    <div class="qual"><div class="ic">🎁</div><h4>Дары и таланты</h4><p>То, что есть у Бога в тебе — высвобождаешь в зал.</p></div>
+    <div class="qual"><div class="ic">🕊️</div><h4>Какого ты духа</h4><p>Дух, которым ты служишь, определяет всю жизнь.</p></div>
+    <div class="qual"><div class="ic">🌌</div><h4>Атмосфера</h4><p>Служение меняет твою атмосферу — и атмосферу других.</p></div>
+  </div>
+</div></section>
+
+<!-- ПОБЕДА -->
+<section><div class="wrap">
+  <div class="banner">
+    <div class="bgimg" style="background-image:url('photos/drums.jpg')"></div>
+    <div class="ic">🏆</div>
+    <h3>В прославлении нельзя выдавить — нужно совершать победу</h3>
+    <p>Хвала — это не усилие «выдавить из себя». Это победа, которую ты совершаешь. И она рождается не в одиночку, а по кругу: сначала в себе, потом в команде, а через команду — во всей церкви.</p>
+    <div class="flow">
+      <div class="fstep"><div class="ic">🙏</div><h4>Победа в себе</h4><p>Сердце в поклонении</p></div>
+      <div class="arrow">→</div>
+      <div class="fstep"><div class="ic">🤝</div><h4>Победа в команде</h4><p>Единый дух</p></div>
+      <div class="arrow">→</div>
+      <div class="fstep"><div class="ic">⛪</div><h4>Победа в церкви</h4><p>Меняется весь зал</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- КОДЕКС ЛЕВИТА -->
+<section><div class="wrap">
+  <p class="eyebrow">Кодекс левита</p>
+  <h2 class="h2">Сердце прославленца</h2>
+  <p class="lead">То, на чём стоит служитель хвалы. Не техника выходит на первый план, а Христос — и дух, которым ты выходишь на служение.</p>
+  <div class="princ">
+    <div class="pcard">
+      <div class="ic">✝️</div>
+      <h3>Лик Христа перед собой</h3>
+      <p>Убираем мысль «получится ли песню сыграть». Сейчас важно не это, а прославить Христа. Держи лик Христа перед собой — и страх сыграть уходит.</p>
+      <div class="verse">«Взирая на начальника и совершителя веры Иисуса» — Евреям 12:2</div>
+    </div>
+    <div class="pcard">
+      <div class="ic">🎵</div>
+      <h3>Пой в духе — всё свершилось</h3>
+      <p>Песня — это не страдальческий плач. Ты поёшь в духе, из позиции «всё свершилось», из Его славы. Это песня победителя, а не жертвы обстоятельств.</p>
+      <div class="verse">«Буду петь духом, буду петь и умом» — 1 Коринфянам 14:15</div>
+    </div>
+    <div class="pcard">
+      <div class="ic">🕊️</div>
+      <h3>Какого ты духа</h3>
+      <p>То, каким духом ты живёшь и служишь, определяет всю твою жизнь. Служение хвалы начинается не со сцены, а с состояния сердца задолго до неё.</p>
+      <div class="verse">«Не знаете, какого вы духа» — Луки 9:55</div>
+    </div>
+    <div class="pcard">
+      <div class="ic">🌌</div>
+      <h3>Меняй атмосферу</h3>
+      <p>Твоё служение меняет твою атмосферу — и атмосферу вокруг. Прославленец приносит в зал небо, а не свои проблемы и настроение дня.</p>
+      <div class="verse">«Ты, живущий среди хвалений Израиля» — Псалтирь 21:4</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- СТРУКТУРА -->
+<section><div class="wrap">
+  <p class="eyebrow">Структура</p>
+  <h2 class="h2">Как устроена команда прославления</h2>
+  <p class="lead">У служения есть духовное покрытие и понятная вертикаль ответственности — от духовного лидера до вокалистов, музыкантов и админа команды.</p>
+  <div class="tree">
+    <div class="node top"><div class="npic g"><img src="photos/den.jpg" alt="Ден" onerror="this.remove()"></div><div class="r">Ден</div><div class="d">Духовный лидер прославления · покрытие и направление</div></div>
+    <div class="stem"></div>
+    <div class="node"><div class="npic"><img src="photos/olya.jpg" alt="Оля" onerror="this.remove()"></div><div class="r">Оля</div><div class="d">Лидер прославления · организация и внешние служения</div></div>
+    <div class="stem p"></div>
+    <div class="node"><div class="npic"><img src="photos/kostya.jpg" alt="Костя" onerror="this.remove()"></div><div class="r">Костя</div><div class="d">Зам лидера прославления</div></div>
+  </div>
+</div></section>
+
+<!-- КОМАНДА -->
+<section><div class="wrap">
+  <p class="eyebrow">Команда</p>
+  <h2 class="h2">Те, кто выходит служить</h2>
+  <p class="lead">Лидеры поклонения, вокалисты и музыканты — единое тело, где каждый знает свою партию и своё место.</p>
+  <div class="team">
+    <div class="member"><div class="pw"><img src="photos/den.jpg" alt="Ден" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">Д</span></div><div class="m-name">Ден</div><div class="m-role">Духовный лидер прославления</div></div>
+    <div class="member"><div class="pw"><img src="photos/olya.jpg" alt="Оля" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">О</span></div><div class="m-name">Оля</div><div class="m-role">Лидер прославления</div></div>
+    <div class="member"><div class="pw"><img src="photos/kostya.jpg" alt="Костя" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">К</span></div><div class="m-name">Костя</div><div class="m-role">Зам лидера прославления</div></div>
+    <div class="member"><div class="pw"><img src="photos/yulya.jpg" alt="Юля" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">Ю</span></div><div class="m-name">Юля</div><div class="m-role">Вокалист</div></div>
+    <div class="member"><div class="pw"><img src="photos/dayana.jpg" alt="Даяна" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">Д</span></div><div class="m-name">Даяна</div><div class="m-role">Вокалист</div></div>
+    <div class="member"><div class="pw"><img src="photos/anya.jpg" alt="Аня" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">А</span></div><div class="m-name">Аня</div><div class="m-role">Вокалист</div></div>
+    <div class="member"><div class="pw"><img src="photos/olesya.jpg" alt="Олеся" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">О</span></div><div class="m-name">Олеся</div><div class="m-role">Музыкант</div></div>
+    <div class="member"><div class="pw"><span class="ph-init">＋</span></div><div class="m-name">Админ</div><div class="m-role">Админ команды прославления</div></div>
+  </div>
+</div></section>
+
+<!-- ОБЯЗАННОСТИ -->
+<section><div class="wrap">
+  <p class="eyebrow">Обязанности</p>
+  <h2 class="h2">За что отвечает прославленец</h2>
+  <p class="lead">Служение — это ответственность в конкретном. У каждой роли — свои обязанности, и вместе они держат всё служение.</p>
+  <div class="dirs">
+    <div class="dir"><span class="ic">🎼</span><div><h4>Знай свою партию</h4><p>Каждый отвечает за свою партию — вокальную или инструментальную — и знает её твёрдо.</p></div></div>
+    <div class="dir"><span class="ic">🎸</span><div><h4>Заботься об инструменте</h4><p>Ответственный за свой инструмент: расчехлить, собрать, зачехлить, упаковать и убрать.</p></div></div>
+    <div class="dir"><span class="ic">📅</span><div><h4>Букинг студии · админ</h4><p>Букинг студии, предоплата, оплата, анонсы репетиций и служений — на админе команды.</p></div></div>
+    <div class="dir"><span class="ic">🤝</span><div><h4>Организация · лидер</h4><p>Лидер прославления: организация команды и коммуникация с внешними служениями.</p></div></div>
+  </div>
+</div></section>
+
+<!-- РЕГЛАМЕНТ РЕПЕТИЦИЙ -->
+<section><div class="wrap">
+  <p class="eyebrow">Регламент</p>
+  <h2 class="h2">Правила репетиций — почтение к Богу и коллективу</h2>
+  <p class="lead">Репетиция — это Божья среда и время, которое оплачивает церковь. Бережём и то, и другое.</p>
+  <div class="rules">
+    <div class="rcol yes">
+      <h3>❣️ Что важно</h3>
+      <ul>
+        <li><span class="mk">✓</span><span>Включённость и вовлечённость на протяжении всей репетиции.</span></li>
+        <li><span class="mk">✓</span><span>Телефон — только для нот и текста.</span></li>
+        <li><span class="mk">✓</span><span>Заранее учить партии и тексты, чтобы не тратить оплаченное церковью время.</span></li>
+        <li><span class="mk">✓</span><span>Делиться песнями, которые высвобождают дух, вдохновляют и мотивируют.</span></li>
+      </ul>
+    </div>
+    <div class="rcol no">
+      <h3>❌ Чего не делаем</h3>
+      <ul>
+        <li><span class="mk">✗</span><span>Рилсы, Инст, работа, Мета, Тредс — во время репетиции.</span></li>
+        <li><span class="mk">✗</span><span>Курение и еда во время репетиции.</span></li>
+        <li><span class="mk">✗</span><span>Опоздания.</span></li>
+        <li><span class="mk">✗</span><span>Нецензурная брань и негатив — они оскверняют Божью среду.</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- РЕСУРСЫ НА ВХОД -->
+<section><div class="wrap">
+  <p class="eyebrow">На вход · онбординг</p>
+  <h2 class="h2">С чего начать новому левиту</h2>
+  <p class="lead">Всё, что нужно человеку на входе в служение: кодекс, правила, расписание и обучение. Ссылки добавим сюда.</p>
+  <div class="res">
+    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">📜</div><h4>Кодекс левита</h4><p>Ценности и сердце служения хвалы — с чего начинается прославленец.</p><span class="go">Открыть →</span></a>
+    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">🎓</div><h4>Школа прославления</h4><p>Полноценное обучение служению хвалы и поклонения.</p><span class="go">Перейти →</span></a>
+    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">▶️</div><h4>Базовые уроки</h4><p>Онбординг-уроки для новичка: основа, с которой стартуют.</p><span class="go">Смотреть →</span></a>
+    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">📋</div><h4>Правила служения</h4><p>Регламент репетиций и почтение к Богу и коллективу.</p><span class="go">Читать →</span></a>
+    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">🗓️</div><h4>Расписание</h4><p>Репетиции и служения: когда, где и во сколько.</p><span class="go">Открыть →</span></a>
+    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">🎶</div><h4>Общий сетлист</h4><p>Песни команды, которые высвобождают дух и вдохновляют.</p><span class="go">Перейти →</span></a>
+  </div>
+</div></section>
+
+<!-- ПИСАНИЕ -->
+<section><div class="wrap">
+  <p class="eyebrow">Основание в Писании</p>
+  <h2 class="h2">Хвала, победа, поклонение</h2>
+  <p class="lead">Служение прославления стоит на Слове: хвала идёт впереди, победа рождается в поклонении, а Господь обитает среди хвалений Своего народа.</p>
+  <div class="scripts">
+    <div class="sc"><p>«Ты, Святый, живёшь среди славословий Израиля».</p><cite>Псалтирь 21:4</cite></div>
+    <div class="sc"><p>«И когда они стали восклицать и славословить, Господь возбудил несогласие между врагами».</p><cite>2 Паралипоменон 20:22</cite></div>
+    <div class="sc"><p>«Итак будем через Него непрестанно приносить Богу жертву хвалы».</p><cite>Евреям 13:15</cite></div>
+  </div>
+</div></section>
+
+<!-- ЗАКЛЮЧЕНИЕ -->
+<section><div class="wrap">
+  <div class="final">
+    <h2>Здесь рождается поклонник</h2>
+    <p>В служении прославления мы держим лик Христа перед собой, поём в духе и совершаем победу — в себе, в команде и в церкви. Дом левитов, где хвала идёт впереди.</p>
+  </div>
+</div></section>
+
+<div class="foot wrap">Служение прославления · Дом левитов</div>
+</body>
+</html>
