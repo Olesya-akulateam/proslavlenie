@@ -205,6 +205,22 @@
   .cxcard li{display:flex;gap:9px;align-items:flex-start;padding:5px 0;font-size:14px;color:#cfc7ea;line-height:1.5}
   .cxcard li .d{color:var(--gold);margin-top:1px;flex-shrink:0}
   @media(max-width:860px){.cx3,.cx2{grid-template-columns:1fr}.keyverse{font-size:19px}.chapter h3{font-size:22px}}
+  /* role groups under the tree */
+  .roles{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
+  .rolecard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;transition:.25s}
+  .rolecard:hover{border-color:var(--acc);box-shadow:var(--glow)}
+  .rolecard .rt{font-family:'Unbounded';font-size:17px;margin:0 0 3px;display:flex;align-items:center;gap:9px}
+  .rolecard .rf{color:#ffe19a;font-size:12.5px;font-weight:700;margin:0 0 16px}
+  .people{display:flex;flex-wrap:wrap;gap:9px}
+  .person{display:flex;align-items:center;gap:8px;background:var(--panel2);border:1px solid var(--line);border-radius:30px;padding:5px 13px 5px 5px;font-size:13px;font-weight:600;color:#e7e2fb}
+  .person .pa{width:28px;height:28px;border-radius:50%;overflow:hidden;background:var(--panel);display:grid;place-items:center;font-size:11px;color:#c9a8ff;font-family:'Unbounded';flex-shrink:0;border:1px solid var(--line)}
+  .person .pa img{width:100%;height:100%;object-fit:cover}
+  @media(max-width:860px){.roles{grid-template-columns:1fr}}
+  /* final creed */
+  .final .fverse{font-style:italic;font-weight:600;font-size:18px;margin:0 auto 24px;max-width:660px;color:#3a1f00}
+  .final .fverse b{display:block;font-style:normal;margin-top:8px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#5a3200}
+  .creed{display:flex;flex-direction:column;gap:9px;font-family:'Unbounded';font-weight:700;font-size:21px;color:#2a1400}
+  @media(max-width:560px){.creed{font-size:17px}.final .fverse{font-size:16px}}
 </style>
 </head>
 <body>
@@ -214,7 +230,7 @@
   <div class="rays"></div>
   <div class="notes"><span>♪</span><span>♫</span><span>♩</span><span>♬</span><span>♪</span><span>♫</span></div>
   <div class="wrap">
-  <div class="crown">👑</div>
+  <div class="crown"><svg viewBox="0 0 100 100" width="48" height="48" fill="none" stroke="#fff" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" aria-label="Церковь Любовь Христа"><path d="M50 84 C 22 62, 9 43, 9 28 C 9 15, 20 8, 30 8 C 39 8, 46 15, 50 22 C 54 15, 61 8, 70 8 C 80 8, 91 15, 91 28 C 91 43, 78 62, 50 84 Z"/><path d="M57 32 L67 32 L67 43 L77 43 L77 53 L67 53 L67 73 L57 73 L57 53 L47 53 L47 43 L57 43 Z"/></svg></div>
   <p class="eyebrow">Служение церкви</p>
   <h1>Служение <span class="gradg">прославления</span></h1>
   <div class="sub">Церковь «Любовь Христа»</div>
@@ -257,7 +273,7 @@
 </div></section>
 
 <!-- КОДЕКС ЛЕВИТА -->
-<section><div class="wrap">
+<section id="codex"><div class="wrap">
   <p class="eyebrow center">Кодекс левита</p>
   <h2 class="h2 center">Образ успешного служителя хвалы</h2>
   <p class="lead center">Ориентир для каждого в команде прославления. Три опоры служителя: компетенция, ответственность и ценности.</p>
@@ -350,31 +366,56 @@
 <section><div class="wrap">
   <p class="eyebrow">Структура</p>
   <h2 class="h2">Как устроена команда прославления</h2>
-  <p class="lead">У служения есть духовное покрытие и понятная вертикаль ответственности — от духовного лидера до вокалистов, музыкантов и админа команды.</p>
   <div class="keyverse">«Впереди шли поющие, позади играющие на орудиях, в средине девы с тимпанами»<b>Псалтирь 67:26</b></div>
   <div class="tree">
-    <div class="node top"><div class="npic g"><img src="photos/den.jpg" alt="Ден" onerror="this.remove()"></div><div class="r">Ден</div><div class="d">Духовный лидер прославления · покрытие и направление</div></div>
+    <div class="node top"><div class="npic g"><img src="photos/den.jpg" alt="Денис Федосеев" onerror="this.remove()"></div><div class="r">Денис Федосеев</div><div class="d">Духовный лидер прославления · духовное направление и воспитание команды</div></div>
     <div class="stem"></div>
-    <div class="node"><div class="npic"><img src="photos/olya.jpg" alt="Оля" onerror="this.remove()"></div><div class="r">Оля</div><div class="d">Лидер прославления · организация и внешние служения</div></div>
+    <div class="node"><div class="npic"><img src="photos/olya.jpg" alt="Оля Оленькова" onerror="this.remove()"></div><div class="r">Оля Оленькова</div><div class="d">Лидер прославления · организация работы команды и связь с внешними служениями</div></div>
     <div class="stem p"></div>
-    <div class="node"><div class="npic"><img src="photos/kostya.jpg" alt="Костя" onerror="this.remove()"></div><div class="r">Костя</div><div class="d">Зам лидера прославления</div></div>
+    <div class="node"><div class="npic"><img src="photos/kostya.jpg" alt="Константин Попов" onerror="this.remove()"></div><div class="r">Константин Попов</div><div class="d">Зам. лидера прославления · исполнение некоторых функций лидера</div></div>
   </div>
-</div></section>
-
-<!-- КОМАНДА -->
-<section><div class="wrap">
-  <p class="eyebrow">Команда</p>
-  <h2 class="h2">Те, кто выходит служить</h2>
-  <p class="lead">Лидеры поклонения, вокалисты и музыканты — единое тело, где каждый знает свою партию и своё место.</p>
-  <div class="team">
-    <div class="member"><div class="pw"><img src="photos/den.jpg" alt="Ден" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">Д</span></div><div class="m-name">Ден</div><div class="m-role">Духовный лидер прославления</div></div>
-    <div class="member"><div class="pw"><img src="photos/olya.jpg" alt="Оля" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">О</span></div><div class="m-name">Оля</div><div class="m-role">Лидер прославления</div></div>
-    <div class="member"><div class="pw"><img src="photos/kostya.jpg" alt="Костя" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">К</span></div><div class="m-name">Костя</div><div class="m-role">Зам лидера прославления</div></div>
-    <div class="member"><div class="pw"><img src="photos/yulya.jpg" alt="Юля" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">Ю</span></div><div class="m-name">Юля</div><div class="m-role">Вокалист</div></div>
-    <div class="member"><div class="pw"><img src="photos/dayana.jpg" alt="Даяна" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">Д</span></div><div class="m-name">Даяна</div><div class="m-role">Вокалист</div></div>
-    <div class="member"><div class="pw"><img src="photos/anya.jpg" alt="Аня" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">А</span></div><div class="m-name">Аня</div><div class="m-role">Вокалист</div></div>
-    <div class="member"><div class="pw"><img src="photos/olesya.jpg" alt="Олеся" onerror="this.remove();this.parentNode.querySelector('.ph-init').style.display='block'"><span class="ph-init" style="display:none">О</span></div><div class="m-name">Олеся</div><div class="m-role">Музыкант</div></div>
-    <div class="member"><div class="pw"><span class="ph-init">＋</span></div><div class="m-name">Админ</div><div class="m-role">Админ команды прославления</div></div>
+  <div class="roles">
+    <div class="rolecard">
+      <div class="rt">🎙️ Лидеры поклонения</div>
+      <div class="rf">Сольное ведение песни</div>
+      <div class="people">
+        <span class="person"><span class="pa"><img src="photos/den.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></span>Денис Федосеев</span>
+        <span class="person"><span class="pa"><img src="photos/olya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='О'"></span>Оля Оленькова</span>
+        <span class="person"><span class="pa"><img src="photos/anya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></span>Аня Воронина</span>
+        <span class="person"><span class="pa"><img src="photos/kostya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='К'"></span>Константин Попов</span>
+        <span class="person"><span class="pa">А</span>Аня Кудрина</span>
+        <span class="person"><span class="pa"><img src="photos/yovita.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Y'"></span>Yovita Chrismira</span>
+      </div>
+    </div>
+    <div class="rolecard">
+      <div class="rt">🎤 Вокалисты</div>
+      <div class="rf">Бэк-вокал</div>
+      <div class="people">
+        <span class="person"><span class="pa"><img src="photos/yulya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Ю'"></span>Юля Рыжова</span>
+        <span class="person"><span class="pa"><img src="photos/dayana.jpg" alt="" onerror="this.remove();this.parentNode.textContent='Д'"></span>Даяна Федотова</span>
+        <span class="person"><span class="pa">A</span>Andry Perdana</span>
+      </div>
+    </div>
+    <div class="rolecard">
+      <div class="rt">🎸 Музыканты</div>
+      <div class="rf">Гитара · клавиши · бас-гитара · кахон · барабаны</div>
+      <div class="people">
+        <span class="person"><span class="pa"><img src="photos/kostya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='К'"></span>Константин Попов</span>
+        <span class="person"><span class="pa">А</span>Аня Кудрина</span>
+        <span class="person"><span class="pa"><img src="photos/sasha.jpg" alt="" onerror="this.remove();this.parentNode.textContent='А'"></span>Александр Осипов</span>
+        <span class="person"><span class="pa"><img src="photos/olesya.jpg" alt="" onerror="this.remove();this.parentNode.textContent='О'"></span>Олеся Саетгареева</span>
+        <span class="person"><span class="pa">П</span>Паша</span>
+        <span class="person"><span class="pa">D</span>Daniel</span>
+        <span class="person"><span class="pa">B</span>Brian</span>
+      </div>
+    </div>
+    <div class="rolecard">
+      <div class="rt">🗂️ Администратор команды</div>
+      <div class="rf">Букинг реп-точки · оплата · анонсы</div>
+      <div class="people">
+        <span class="person"><span class="pa">Д</span>Дарья Жуковская</span>
+      </div>
+    </div>
   </div>
 </div></section>
 
@@ -382,20 +423,17 @@
 <section><div class="wrap">
   <p class="eyebrow">Обязанности</p>
   <h2 class="h2">За что отвечает прославленец</h2>
-  <p class="lead">Служение — это ответственность в конкретном. У каждой роли — свои обязанности, и вместе они держат всё служение.</p>
+  <p class="lead">Каждый участник команды ответственно подходит к своему служению и вверенной ему роли.</p>
   <div class="dirs">
-    <div class="dir"><span class="ic">🎼</span><div><h4>Знай свою партию</h4><p>Каждый отвечает за свою партию — вокальную или инструментальную — и знает её твёрдо.</p></div></div>
-    <div class="dir"><span class="ic">🎸</span><div><h4>Заботься об инструменте</h4><p>Ответственный за свой инструмент: расчехлить, собрать, зачехлить, упаковать и убрать.</p></div></div>
-    <div class="dir"><span class="ic">📅</span><div><h4>Букинг студии · админ</h4><p>Букинг студии, предоплата, оплата, анонсы репетиций и служений — на админе команды.</p></div></div>
-    <div class="dir"><span class="ic">🤝</span><div><h4>Организация · лидер</h4><p>Лидер прославления: организация команды и коммуникация с внешними служениями.</p></div></div>
+    <div class="dir"><span class="ic">🤝</span><div><h4>Уважай других участников</h4><p>Приходи на репетиции вовремя и готовым, не отвлекайся в процессе.</p></div></div>
+    <div class="dir"><span class="ic">🕊️</span><div><h4>Будь в духе</h4><p>Следи за состоянием своего духа и помни: атмосфера в команде зависит от тебя.</p></div></div>
   </div>
 </div></section>
 
 <!-- РЕГЛАМЕНТ РЕПЕТИЦИЙ -->
 <section><div class="wrap">
   <p class="eyebrow">Регламент</p>
-  <h2 class="h2">Правила репетиций — почтение к Богу и коллективу</h2>
-  <p class="lead">Репетиция — это Божья среда и время, которое оплачивает церковь. Бережём и то, и другое.</p>
+  <h2 class="h2">Правила поведения на репетиции</h2>
   <div class="rules">
     <div class="rcol yes">
       <h3>❣️ Что важно</h3>
@@ -403,13 +441,13 @@
         <li><span class="mk">✓</span><span>Включённость и вовлечённость на протяжении всей репетиции.</span></li>
         <li><span class="mk">✓</span><span>Телефон — только для нот и текста.</span></li>
         <li><span class="mk">✓</span><span>Заранее учить партии и тексты, чтобы не тратить оплаченное церковью время.</span></li>
-        <li><span class="mk">✓</span><span>Делиться песнями, которые высвобождают дух, вдохновляют и мотивируют.</span></li>
+        <li><span class="mk">✓</span><span>Соблюдать порядок в ходе репетиции, следуя за лидером.</span></li>
       </ul>
     </div>
     <div class="rcol no">
       <h3>❌ Чего не делаем</h3>
       <ul>
-        <li><span class="mk">✗</span><span>Рилсы, Инст, работа, Мета, Тредс — во время репетиции.</span></li>
+        <li><span class="mk">✗</span><span>Соц. сети, работа, переписки во время репетиции.</span></li>
         <li><span class="mk">✗</span><span>Курение и еда во время репетиции.</span></li>
         <li><span class="mk">✗</span><span>Опоздания.</span></li>
         <li><span class="mk">✗</span><span>Нецензурная брань и негатив — они оскверняют Божью среду.</span></li>
@@ -422,34 +460,23 @@
 <section><div class="wrap">
   <p class="eyebrow">На вход · онбординг</p>
   <h2 class="h2">С чего начать новому левиту</h2>
-  <p class="lead">Всё, что нужно человеку на входе в служение: кодекс, правила, расписание и обучение. Ссылки добавим сюда.</p>
+  <p class="lead">Всё, с чего начинается путь в служении: кодекс левита и школа прославления.</p>
   <div class="res">
-    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">📜</div><h4>Кодекс левита</h4><p>Ценности и сердце служения хвалы — с чего начинается прославленец.</p><span class="go">Открыть →</span></a>
-    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">🎓</div><h4>Школа прославления</h4><p>Полноценное обучение служению хвалы и поклонения.</p><span class="go">Перейти →</span></a>
-    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">▶️</div><h4>Базовые уроки</h4><p>Онбординг-уроки для новичка: основа, с которой стартуют.</p><span class="go">Смотреть →</span></a>
-    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">📋</div><h4>Правила служения</h4><p>Регламент репетиций и почтение к Богу и коллективу.</p><span class="go">Читать →</span></a>
-    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">🗓️</div><h4>Расписание</h4><p>Репетиции и служения: когда, где и во сколько.</p><span class="go">Открыть →</span></a>
-    <a class="rcard" href="#" target="_blank" rel="noopener"><div class="ic">🎶</div><h4>Общий сетлист</h4><p>Песни команды, которые высвобождают дух и вдохновляют.</p><span class="go">Перейти →</span></a>
-  </div>
-</div></section>
-
-<!-- ПИСАНИЕ -->
-<section><div class="wrap">
-  <p class="eyebrow">Основание в Писании</p>
-  <h2 class="h2">Хвала, победа, поклонение</h2>
-  <p class="lead">Служение прославления стоит на Слове: хвала идёт впереди, победа рождается в поклонении, а Господь обитает среди хвалений Своего народа.</p>
-  <div class="scripts">
-    <div class="sc"><p>«Ты, Святый, живёшь среди славословий Израиля».</p><cite>Псалтирь 21:4</cite></div>
-    <div class="sc"><p>«И когда они стали восклицать и славословить, Господь возбудил несогласие между врагами».</p><cite>2 Паралипоменон 20:22</cite></div>
-    <div class="sc"><p>«Итак будем через Него непрестанно приносить Богу жертву хвалы».</p><cite>Евреям 13:15</cite></div>
+    <a class="rcard" href="#codex"><div class="ic">📜</div><h4>Кодекс левита</h4><p>Ценности и образ успешного служителя хвалы — с чего начинается прославленец.</p><span class="go">Открыть →</span></a>
+    <a class="rcard" href="https://t.me/+9vxnF4TdZi02NjUy" target="_blank" rel="noopener"><div class="ic">🎓</div><h4>Школа прославления</h4><p>Полноценное обучение служению хвалы и поклонения.</p><span class="go">Перейти →</span></a>
   </div>
 </div></section>
 
 <!-- ЗАКЛЮЧЕНИЕ -->
 <section><div class="wrap">
   <div class="final">
-    <h2>Здесь рождается поклонник</h2>
-    <p>В служении прославления мы совершаем победу в хвале — в себе, в команде и в церкви. Церковь «Любовь Христа», где хвала идёт впереди.</p>
+    <h2>Здесь совершается победа</h2>
+    <p class="fverse">«Буду возвещать имя Твое братьям моим, посреди собрания буду хвалить Тебя».<b>Псалом 21:23</b></p>
+    <div class="creed">
+      <div>Наш талант — наше оружие</div>
+      <div>Наша музыка — наше служение</div>
+      <div>Наша хвала — наша победа</div>
+    </div>
   </div>
 </div></section>
 
