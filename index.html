@@ -267,9 +267,9 @@
   .langbar .lb:hover{border-color:var(--gold);color:#fff}
   .langbar .lb.active{background:var(--gradgold);color:#2a1400;border-color:transparent}
   #google_translate_element{display:none}
-  .goog-te-banner-frame,.goog-te-gadget-icon,.goog-logo-link,.goog-te-balloon-frame{display:none!important}
+  .goog-te-banner-frame,.goog-te-banner-frame.skiptranslate,iframe.goog-te-banner-frame,.goog-te-gadget-icon,.goog-logo-link,.goog-te-balloon-frame{display:none!important;visibility:hidden!important;height:0!important}
   .goog-text-highlight{background:none!important;box-shadow:none!important}
-  body{top:0!important}
+  body{top:0!important;position:static!important}
   .rolecard:hover{border-color:var(--acc);box-shadow:var(--glow)}
   .rolecard .rt{font-family:'Unbounded';font-size:17px;margin:0 0 3px;display:flex;align-items:center;gap:9px}
   .rolecard .rf{color:#ffe19a;font-size:12.5px;font-weight:700;margin:0 0 16px}
@@ -502,12 +502,22 @@ function setLang(l){
 (function(){
   var m=document.cookie.match(/googtrans=\/ru\/(\w+)/);var l=m?m[1]:'ru';
   function applyTr(){document.querySelectorAll('.tr').forEach(function(e){var v=e.getAttribute('data-'+l);if(v!=null)e.textContent=v;});}
-  function killGT(){var f=document.querySelector('.goog-te-banner-frame');if(f)f.style.display='none';if(document.body)document.body.style.top='0px';}
+  function killGT(){
+    document.querySelectorAll('.goog-te-banner-frame, iframe.goog-te-banner-frame, .skiptranslate iframe').forEach(function(f){try{f.remove();}catch(e){f.style.display='none';}});
+    if(document.body){document.body.style.top='0';document.body.style.position='static';}
+    var h=document.documentElement;if(h)h.style.marginTop='0';
+  }
   document.addEventListener('DOMContentLoaded',function(){
     var b=document.querySelector('.langbar .lb.'+l);if(b)b.classList.add('active');
     applyTr();
   });
-  setInterval(killGT,300);
+  killGT();
+  setInterval(killGT,250);
+  try{
+    var mo=new MutationObserver(killGT);
+    mo.observe(document.documentElement,{childList:true});
+    if(document.body)mo.observe(document.body,{childList:true});
+  }catch(e){}
 })();
 </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
